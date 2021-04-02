@@ -81,6 +81,18 @@
 :SurveysSentByWorkforceSize rdf:type qb:DataSet ;
     dc:title "Sample for the BICS survey broken down by workforce size" .
 
+:ResponsesByIndustry rdf:type qb:DataSet ;
+    dc:title "Responses to the BICS survey broken down by industry" .
+
+:ResponsesByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Responses to the BICS survey broken down by workforce size" .
+
+:ResponseProportionsByIndustry rdf:type qb:DataSet ;
+    dc:title "Proportion of responses to the BICS survey broken down by industry" .
+
+:ResponseProportionsByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Proportion of responses to the BICS survey broken down by workforce size" .
+
 
 #Surveys Sent by Industry data
 :SurveysSentByIndustry_1_1 rdf:type qb:Observation ;
@@ -447,4 +459,614 @@
     covid:Industry              :AllIndustries ;
     covid:WorkforceSize         :Total ;
     covid:NumberOfSurveysSent   17623 ;
+    .
+
+
+#Number of Responses by Industry data
+:ResponsesByIndustry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     648 ;
+    .
+
+:ResponsesByIndustry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     449 ;
+    .
+
+:ResponsesByIndustry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     1097 ;
+    .
+
+:ResponsesByIndustry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     50 ;
+    .
+
+:ResponsesByIndustry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     20 ;
+    .
+
+:ResponsesByIndustry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     70 ;
+    .
+
+:ResponsesByIndustry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     208 ;
+    .
+
+:ResponsesByIndustry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     76 ;
+    .
+
+:ResponsesByIndustry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     284 ;
+    .
+
+:ResponsesByIndustry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     686 ;
+    .
+
+:ResponsesByIndustry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     344 ;
+    .
+
+:ResponsesByIndustry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     1030 ;
+    .
+
+:ResponsesByIndustry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     321 ;
+    .
+
+:ResponsesByIndustry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     195 ;
+    .
+
+:ResponsesByIndustry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     516 ;
+    .
+
+:ResponsesByIndustry_6_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     193 ;
+    .
+
+:ResponsesByIndustry_6_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     89 ;
+    .
+
+:ResponsesByIndustry_6_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     282 ;
+    .
+
+:ResponsesByIndustry_7_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     297 ;
+    .
+
+:ResponsesByIndustry_7_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     121 ;
+    .
+
+:ResponsesByIndustry_7_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     418 ;
+    .
+
+:ResponsesByIndustry_8_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     468 ;
+    .
+
+:ResponsesByIndustry_8_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     265 ;
+    .
+
+:ResponsesByIndustry_8_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     733 ;
+    .
+
+:ResponsesByIndustry_9_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     453 ;
+    .
+
+:ResponsesByIndustry_9_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     361 ;
+    .
+
+:ResponsesByIndustry_9_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     814 ;
+    .
+
+:ResponsesByIndustry_10_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     127 ;
+    .
+
+:ResponsesByIndustry_10_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     191 ;
+    .
+
+:ResponsesByIndustry_10_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     318 ;
+    .
+
+:ResponsesByIndustry_11_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     85 ;
+    .
+
+:ResponsesByIndustry_11_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     59 ;
+    .
+
+:ResponsesByIndustry_11_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     144 ;
+    .
+
+:ResponsesByIndustry_12_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     180 ;
+    .
+
+:ResponsesByIndustry_12_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     98 ;
+    .
+
+:ResponsesByIndustry_12_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     278 ;
+    .
+
+:ResponsesByIndustry_13_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfResponses     3809 ;
+    .
+
+:ResponsesByIndustry_13_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     2305 ;
+    .
+
+:ResponsesByIndustry_13_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     6114 ;
+    .
+
+
+#Number of Responses by Workforce Size data
+:ResponsesByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :LessThan100 ;
+    covid:NumberOfResponses     357 ;
+    .
+
+:ResponsesByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Between100And250 ;
+    covid:NumberOfResponses     3452 ;
+    .
+
+:ResponsesByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfResponses     2305 ;
+    .
+
+:ResponsesByWorkforceSize_1_4 rdf:type qb:Observation ;
+    qb:dataSet :ResponsesByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfResponses     6114 ;
+    .
+
+
+#Proportion of Responses by Industry data
+:ResponseProportionsByIndustry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     36.3 ;
+    .
+
+:ResponseProportionsByIndustry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     32.8 ;
+    .
+
+:ResponseProportionsByIndustry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.8 ;
+    .
+
+:ResponseProportionsByIndustry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     38.5 ;
+    .
+
+:ResponseProportionsByIndustry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     28.2 ;
+    .
+
+:ResponseProportionsByIndustry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.8 ;
+    .
+
+:ResponseProportionsByIndustry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     28.8 ;
+    .
+
+:ResponseProportionsByIndustry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     24.4 ;
+    .
+
+:ResponseProportionsByIndustry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     27.5 ;
+    .
+
+:ResponseProportionsByIndustry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     37.7 ;
+    .
+
+:ResponseProportionsByIndustry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     29.2 ;
+    .
+
+:ResponseProportionsByIndustry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.3 ;
+    .
+
+:ResponseProportionsByIndustry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     32.9 ;
+    .
+
+:ResponseProportionsByIndustry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     29.6 ;
+    .
+
+:ResponseProportionsByIndustry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     31.6 ;
+    .
+
+:ResponseProportionsByIndustry_6_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     36.6 ;
+    .
+
+:ResponseProportionsByIndustry_6_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     26.6 ;
+    .
+
+:ResponseProportionsByIndustry_6_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     32.7 ;
+    .
+
+:ResponseProportionsByIndustry_7_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     37.4 ;
+    .
+
+:ResponseProportionsByIndustry_7_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     28.7 ;
+    .
+
+:ResponseProportionsByIndustry_7_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.4 ;
+    .
+
+:ResponseProportionsByIndustry_8_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     35.9 ;
+    .
+
+:ResponseProportionsByIndustry_8_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     36.8 ;
+    .
+
+:ResponseProportionsByIndustry_8_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     36.2 ;
+    .
+
+:ResponseProportionsByIndustry_9_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     35.2 ;
+    .
+
+:ResponseProportionsByIndustry_9_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     33.7 ;
+    .
+
+:ResponseProportionsByIndustry_9_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.5 ;
+    .
+
+:ResponseProportionsByIndustry_10_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Education ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     41.9 ;
+    .
+
+:ResponseProportionsByIndustry_10_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Education ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     41.8 ;
+    .
+
+:ResponseProportionsByIndustry_10_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :Education ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     41.8 ;
+    .
+
+:ResponseProportionsByIndustry_11_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     58.6 ;
+    .
+
+:ResponseProportionsByIndustry_11_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     39.6 ;
+    .
+
+:ResponseProportionsByIndustry_11_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     49.0 ;
+    .
+
+:ResponseProportionsByIndustry_12_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     43.4 ;
+    .
+
+:ResponseProportionsByIndustry_12_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     32.3 ;
+    .
+
+:ResponseProportionsByIndustry_12_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     38.7 ;
+    .
+
+:ResponseProportionsByIndustry_13_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:ProportionOfResponses     36.5 ;
+    .
+
+:ResponseProportionsByIndustry_13_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     32.1 ;
+    .
+
+:ResponseProportionsByIndustry_13_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.7 ;
+    .
+
+
+#Proportion of Responses by Workforce Size data
+:ResponseProportionsByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByWorkforceSize ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :LessThan100 ;
+    covid:ProportionOfResponses     26.9 ;
+    .
+
+:ResponseProportionsByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByWorkforceSize ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :Between100And250 ;
+    covid:ProportionOfResponses     37.9 ;
+    .
+
+:ResponseProportionsByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByWorkforceSize ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :250Plus ;
+    covid:ProportionOfResponses     32.1 ;
+    .
+
+:ResponseProportionsByWorkforceSize_1_4 rdf:type qb:Observation ;
+    qb:dataSet :ResponseProportionsByWorkforceSize ;
+    covid:Industry                  :AllIndustries ;
+    covid:WorkforceSize             :Total ;
+    covid:ProportionOfResponses     34.7 ;
     .

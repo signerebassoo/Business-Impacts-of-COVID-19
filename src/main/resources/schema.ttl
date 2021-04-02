@@ -6,15 +6,25 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 
-#Dimensions - row (Number of Surveys Sent by Industry)
+#Dimensions - row (Industry)
 :Industry rdf:type owl:Class ;
     rdfs:subClassOf qb:DimensionProperty .
 
-#Dimensions - column (Number of Surveys Sent by Industry)
+#Dimensions - column (Workforce Size)
 :WorkforceSize rdf:type owl:Class ;
     rdfs:subClassOf qb:DimensionProperty .
 
-#Measure - value (Number of Surveys Sent by Industry)
-:NumberOfSurveysSent rdf:type owl:Class;
+#Measure - value (Number of Surveys Sent)
+:NumberOfSurveysSent rdf:type owl:Class ;
     rdfs:subClassOf qb:MeasureProperty ;
     rdfs:range xsd:nonNegativeInteger .
+
+#Measure - value (Number of Responses)
+:NumberOfResponses rdf:type owl:Class ;
+    rdfs:subClassOf qb:MeasureProperty ;
+    rdfs:range xsd:nonNegativeInteger .
+
+#Measure - value (Proportion of Responses)
+:ProportionOfResponses rdf:type owl:Class ;
+    rdfs:subClassOf qb:MeasureProperty ;
+    rdfs:range xsd:decimal .
