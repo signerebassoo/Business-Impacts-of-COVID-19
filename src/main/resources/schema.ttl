@@ -1,0 +1,20 @@
+@prefix : <http://www.semanticweb.org/schema/covid/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+
+#Dimensions - row (Number of Surveys Sent by Industry)
+:Industry rdf:type owl:Class ;
+    rdfs:subClassOf qb:DimensionProperty .
+
+#Dimensions - column (Number of Surveys Sent by Industry)
+:WorkforceSize rdf:type owl:Class ;
+    rdfs:subClassOf qb:DimensionProperty .
+
+#Measure - value (Number of Surveys Sent by Industry)
+:NumberOfSurveysSent rdf:type owl:Class;
+    rdfs:subClassOf qb:MeasureProperty ;
+    rdfs:range xsd:nonNegativeInteger .
