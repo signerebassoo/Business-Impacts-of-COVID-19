@@ -1,0 +1,450 @@
+@prefix : <http://covid.semanticweb.org/data> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix covid: <http://www.semanticweb.org/schema/covid/> .
+
+#Industry instances
+:MiningAndQuarrying rdf:type covid:Industry ;
+    dc:title "Mining And Quarrying" .
+
+:Manufacturing rdf:type covid:Industry ;
+    dc:title "Manufacturing" .
+
+:WaterSupplySewerageWasteManagementAndRemediationActivities rdf:type covid:Industry ;
+    dc:title "Water Supply, Sewerage, Waste Management And Remediation Activities" .
+
+:Construction rdf:type covid:Industry ;
+    dc:title "Construction" .
+
+:WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles rdf:type covid:Industry ;
+    dc:title "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles" .
+
+:AccommodationAndFoodServiceActivities rdf:type covid:Industry ;
+    dc:title "Accommodation And Food Service Activities" .
+
+:TransportationAndStorage rdf:type covid:Industry ;
+    dc:title "Transportation And Storage" .
+
+:InformationAndCommunication rdf:type covid:Industry ;
+    dc:title "Information And Communication" .
+
+:RealEstateActivities rdf:type covid:Industry ;
+    dc:title "Real Estate Activities" .
+
+:ProfessionalScientificAndTechnicalActivities rdf:type covid:Industry ;
+    dc:title "Professional, Scientific And Technical Activities" .
+
+:AdministrativeAndSupportServiceActivities rdf:type covid:Industry ;
+    dc:title "Administrative And Support Service Activities" .
+
+:Education rdf:type covid:Industry ;
+    dc:title "Education" .
+
+:HumanHealthAndSocialWorkActivities rdf:type covid:Industry ;
+    dc:title "Human Health And Social Work Activities" .
+
+:ArtsEntertainmentAndRecreation rdf:type covid:Industry ;
+    dc:title "Arts, Entertainment And Recreation" .
+
+:OtherServiceActivities rdf:type covid:Industry ;
+    dc:title "Other Service Activities" .
+
+:AllIndustries rdf:type covid:Industry ;
+    dc:title "All Industries" .
+
+
+#Workforce Size instances
+:LessThan250 rdf:type covid:WorkforceSize ;
+    dc:title "Workforce Size 0-249" .
+
+:250Plus rdf:type covid:WorkforceSize ;
+    dc:title "Workforce Size 250+" .
+
+:LessThan100 rdf:type covid:WorkforceSize ;
+    dc:title "Workforce Size 0-99" .
+
+:Between100And250 rdf:type covid:WorkforceSize ;
+    dc:title "Workforce Size 100-249" .
+
+:Total rdf:type covid:WorkforceSize ;
+    dc:title "Total" .
+
+
+#Datasets (tables)
+:SurveysSentByIndustry rdf:type qb:DataSet ;
+    dc:title "Sample for the BICS survey broken down by industry" .
+
+:SurveysSentByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Sample for the BICS survey broken down by workforce size" .
+
+
+#Surveys Sent by Industry data
+:SurveysSentByIndustry_1_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :MiningAndQuarrying ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   15 ;
+    .
+
+:SurveysSentByIndustry_1_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :MiningAndQuarrying ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   13 ;
+    .
+
+:SurveysSentByIndustry_1_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :MiningAndQuarrying ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   28 ;
+    .
+
+:SurveysSentByIndustry_2_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   1785 ;
+    .
+
+:SurveysSentByIndustry_2_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   1370 ;
+    .
+
+:SurveysSentByIndustry_2_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Manufacturing ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   3155 ;
+    .
+
+:SurveysSentByIndustry_3_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   130 ;
+    .
+
+:SurveysSentByIndustry_3_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   71 ;
+    .
+
+:SurveysSentByIndustry_3_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   201 ;
+    .
+
+:SurveysSentByIndustry_4_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   722 ;
+    .
+
+:SurveysSentByIndustry_4_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   312 ;
+    .
+
+:SurveysSentByIndustry_4_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Construction ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   1034 ;
+    .
+
+:SurveysSentByIndustry_5_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   1819 ;
+    .
+
+:SurveysSentByIndustry_5_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   1180 ;
+    .
+
+:SurveysSentByIndustry_5_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   2999 ;
+    .
+
+:SurveysSentByIndustry_6_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   975 ;
+    .
+
+:SurveysSentByIndustry_6_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   659 ;
+    .
+
+:SurveysSentByIndustry_6_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AccommodationAndFoodServiceActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   1634 ;
+    .
+
+:SurveysSentByIndustry_7_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   528 ;
+    .
+
+:SurveysSentByIndustry_7_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   335 ;
+    .
+
+:SurveysSentByIndustry_7_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :TransportationAndStorage ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   863 ;
+    .
+
+:SurveysSentByIndustry_8_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   794 ;
+    .
+
+:SurveysSentByIndustry_8_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   422 ;
+    .
+
+:SurveysSentByIndustry_8_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :InformationAndCommunication ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   1216 ;
+    .
+
+:SurveysSentByIndustry_9_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :RealEstateActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   112 ;
+    .
+
+:SurveysSentByIndustry_9_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :RealEstateActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   88 ;
+    .
+
+:SurveysSentByIndustry_9_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :RealEstateActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   200 ;
+    .
+
+:SurveysSentByIndustry_10_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   1303 ;
+    .
+
+:SurveysSentByIndustry_10_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   720 ;
+    .
+
+:SurveysSentByIndustry_10_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ProfessionalScientificAndTechnicalActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   2023 ;
+    .
+
+:SurveysSentByIndustry_11_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   1287 ;
+    .
+
+:SurveysSentByIndustry_11_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   1072 ;
+    .
+
+:SurveysSentByIndustry_11_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AdministrativeAndSupportServiceActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   2359 ;
+    .
+
+:SurveysSentByIndustry_12_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   303 ;
+    .
+
+:SurveysSentByIndustry_12_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   457 ;
+    .
+
+:SurveysSentByIndustry_12_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :Education ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   760 ;
+    .
+
+:SurveysSentByIndustry_13_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   145 ;
+    .
+
+:SurveysSentByIndustry_13_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   149 ;
+    .
+
+:SurveysSentByIndustry_13_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :HumanHealthAndSocialWorkActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   294 ;
+    .
+
+:SurveysSentByIndustry_14_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   415 ;
+    .
+
+:SurveysSentByIndustry_14_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   303 ;
+    .
+
+:SurveysSentByIndustry_14_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :ArtsEntertainmentAndRecreation ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   718 ;
+    .
+
+:SurveysSentByIndustry_15_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :OtherServiceActivities ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   108 ;
+    .
+
+:SurveysSentByIndustry_15_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :OtherServiceActivities ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   29 ;
+    .
+
+:SurveysSentByIndustry_15_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :OtherServiceActivities ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   137 ;
+    .
+
+:SurveysSentByIndustry_16_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :LessThan250 ;
+    covid:NumberOfSurveysSent   10442 ;
+    .
+
+:SurveysSentByIndustry_16_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   7182 ;
+    .
+
+:SurveysSentByIndustry_16_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByIndustry ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   17624 ;
+    .
+
+
+#Surveys Sent by Workforce Size data
+:SurveysSentByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :LessThan100 ;
+    covid:NumberOfSurveysSent   1326 ;
+    .
+
+:SurveysSentByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Between100And250 ;
+    covid:NumberOfSurveysSent   9116 ;
+    .
+
+:SurveysSentByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :250Plus ;
+    covid:NumberOfSurveysSent   7181 ;
+    .
+
+:SurveysSentByWorkforceSize_1_4 rdf:type qb:Observation ;
+    qb:DataSet :SurveysSentByWorkforceSize ;
+    covid:Industry              :AllIndustries ;
+    covid:WorkforceSize         :Total ;
+    covid:NumberOfSurveysSent   17623 ;
+    .
