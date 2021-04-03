@@ -22,6 +22,10 @@
 :TradingStatus rdf:type owl:Class ;
     rdfs:subClassOf qb:DimensionProperty .
 
+#Dimensions - column (Government Scheme)
+:GovernmentScheme rdf:type owl:Class ;
+    rdfs:subClassOf qb:DimensionProperty .
+
 #Measure - value (Number of Surveys Sent)
 :NumberOfSurveysSent rdf:type owl:Class ;
     rdfs:subClassOf qb:MeasureProperty ;
@@ -34,5 +38,10 @@
 
 #Measure - value (Proportion of Responses)
 :ProportionOfResponses rdf:type owl:Class ;
+    rdfs:subClassOf qb:MeasureProperty ;
+    rdfs:range xsd:decimal .
+
+#Measure - value (Percentage of Responses)
+:PercentageOfResponses rdf:type owl:Class ;
     rdfs:subClassOf qb:MeasureProperty ;
     rdfs:range xsd:decimal .

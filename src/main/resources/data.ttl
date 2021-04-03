@@ -102,6 +102,29 @@
     dc:title "Temporarily closed or paused trading" .
 
 
+#Government Scheme instances
+:CoronavirusJobRetentionScheme rdf:type covid:GovernmentScheme ;
+    dc:title "Coronavirus Job Retention Scheme" .
+
+:BusinessRatesHoliday rdf:type covid:GovernmentScheme ;
+    dc:title "Business rates holiday" .
+
+:DeferringVATPayments rdf:type covid:GovernmentScheme ;
+    dc:title "Deferring VAT payments" .
+
+:HMRCTimeToPayScheme rdf:type covid:GovernmentScheme ;
+    dc:title "HMRC Time To Pay scheme" .
+
+:GovernmentFundedSmallBusinessGrantOrLoanSchemes rdf:type covid:GovernmentScheme ;
+    dc:title "Government-funded small business grant or loan schemes" .
+
+:AccreditedFinanceAgreements rdf:type covid:GovernmentScheme ;
+    dc:title "Accredited finance agreements" .
+
+:None rdf:type covid:GovernmentScheme ;
+    dc:title "None" .
+
+
 #Datasets (tables)
 :SurveysSentByIndustry rdf:type qb:DataSet ;
     dc:title "Sample for the BICS survey broken down by industry" .
@@ -129,6 +152,27 @@
 
 :TradingStatusByCountry rdf:type qb:DataSet ;
     dc:title "Trading status of all responding businesses broken down by country" .
+
+:AppliedGovernmentSchemesByIndustry rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by industry" .
+
+:AppliedGovernmentSchemesByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by size band" .
+
+:AppliedGovernmentSchemesByCountry rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by country" .
+
+:ReceivedGovernmentSchemesByIndustry rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by industry" .
+
+:ReceivedGovernmentSchemesByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by size band" .
+
+:IntendedGovernmentSchemesByIndustry rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by industry" .
+
+:IntendedGovernmentSchemesByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by size band" .
 
 
 #Surveys Sent by Industry data
