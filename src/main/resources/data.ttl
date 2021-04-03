@@ -74,6 +74,34 @@
     dc:title "Total" .
 
 
+#Country instances
+:England rdf:type covid:Country ;
+    dc:title "England" .
+
+:Wales rdf:type covid:Country ;
+    dc:title "Wales" .
+
+:Scotland rdf:type covid:Country ;
+    dc:title "Scotland" .
+
+:NorthernIreland rdf:type covid:Country ;
+    dc:title "Northern Ireland" .
+
+:UK rdf:type covid:Country ;
+    dc:title "UK" .
+
+
+#Trading Status instances
+:ContinuingToTrade rdf:type covid:TradingStatus ;
+    dc:title "Continuing to trade" .
+
+:PermanentlyCeased rdf:type covid:TradingStatus ;
+    dc:title "Permanently ceased trading" .
+
+:TemporarilyClosedOrPaused rdf:type covid:TradingStatus ;
+    dc:title "Temporarily closed or paused trading" .
+
+
 #Datasets (tables)
 :SurveysSentByIndustry rdf:type qb:DataSet ;
     dc:title "Sample for the BICS survey broken down by industry" .
@@ -92,6 +120,15 @@
 
 :ResponseProportionsByWorkforceSize rdf:type qb:DataSet ;
     dc:title "Proportion of responses to the BICS survey broken down by workforce size" .
+
+:TradingStatusByIndustry rdf:type qb:DataSet ;
+    dc:title "Trading status of all responding businesses broken down by industry" .
+
+:TradingStatusByWorkforceSize rdf:type qb:DataSet ;
+    dc:title "Trading status of all responding businesses broken down by size band" .
+
+:TradingStatusByCountry rdf:type qb:DataSet ;
+    dc:title "Trading status of all responding businesses broken down by country" .
 
 
 #Surveys Sent by Industry data
@@ -1069,4 +1106,451 @@
     covid:Industry                  :AllIndustries ;
     covid:WorkforceSize             :Total ;
     covid:ProportionOfResponses     34.7 ;
+    .
+
+
+#Trading Status by Industry data
+:TradingStatusByIndustry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     79.0 ;
+    .
+
+:TradingStatusByIndustry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.4 ;
+    .
+
+:TradingStatusByIndustry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     20.6 ;
+    .
+
+:TradingStatusByIndustry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     90.0 ;
+    .
+
+:TradingStatusByIndustry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.0 ;
+    .
+
+:TradingStatusByIndustry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     10.0 ;
+    .
+
+:TradingStatusByIndustry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     73.2 ;
+    .
+
+:TradingStatusByIndustry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.7 ;
+    .
+
+:TradingStatusByIndustry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     26.1 ;
+    .
+
+:TradingStatusByIndustry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     75.2 ;
+    .
+
+:TradingStatusByIndustry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByIndustry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:TradingStatus             :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:ProportionOfResponses     24.3 ;
+    .
+
+:TradingStatusByIndustry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     18.2 ;
+    .
+
+:TradingStatusByIndustry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     1.2 ;
+    .
+
+:TradingStatusByIndustry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     80.6 ;
+    .
+
+:TradingStatusByIndustry_6_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     91.5 ;
+    .
+
+:TradingStatusByIndustry_6_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.0 ;
+    .
+
+:TradingStatusByIndustry_6_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     8.5 ;
+    .
+
+:TradingStatusByIndustry_7_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     95.0 ;
+    .
+
+:TradingStatusByIndustry_7_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByIndustry_7_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     4.5 ;
+    .
+
+:TradingStatusByIndustry_8_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     96.7 ;
+    .
+
+:TradingStatusByIndustry_8_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.3 ;
+    .
+
+:TradingStatusByIndustry_8_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     3.0 ;
+    .
+
+:TradingStatusByIndustry_9_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     91.5 ;
+    .
+
+:TradingStatusByIndustry_9_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.4 ;
+    .
+
+:TradingStatusByIndustry_9_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     8.1 ;
+    .
+
+:TradingStatusByIndustry_10_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Education ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     86.8 ;
+    .
+
+:TradingStatusByIndustry_10_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Education ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.6 ;
+    .
+
+:TradingStatusByIndustry_10_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :Education ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     12.6 ;
+    .
+
+:TradingStatusByIndustry_11_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     93.7 ;
+    .
+
+:TradingStatusByIndustry_11_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     1.4 ;
+    .
+
+:TradingStatusByIndustry_11_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     4.9 ;
+    .
+
+:TradingStatusByIndustry_12_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     20.5 ;
+    .
+
+:TradingStatusByIndustry_12_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.0 ;
+    .
+
+:TradingStatusByIndustry_12_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     79.5 ;
+    .
+
+:TradingStatusByIndustry_13_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     76.7 ;
+    .
+
+:TradingStatusByIndustry_13_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByIndustry_13_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     22.8 ;
+    .
+
+
+#Trading Status by Workforce Size data
+:TradingStatusByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     74.8 ;
+    .
+
+:TradingStatusByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     24.7 ;
+    .
+
+:TradingStatusByWorkforceSize_2_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     79.8 ;
+    .
+
+:TradingStatusByWorkforceSize_2_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByWorkforceSize_2_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     19.7 ;
+    .
+
+:TradingStatusByWorkforceSize_3_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     76.7 ;
+    .
+
+:TradingStatusByWorkforceSize_3_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByWorkforceSize_3_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     22.8 ;
+    .
+
+
+#Trading Status by Country data
+:TradingStatusByCountry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :England ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     77.8 ;
+    .
+
+:TradingStatusByCountry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :England ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.4 ;
+    .
+
+:TradingStatusByCountry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :England ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     21.8 ;
+    .
+
+:TradingStatusByCountry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Wales ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     76.2 ;
+    .
+
+:TradingStatusByCountry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Wales ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     1.1 ;
+    .
+
+:TradingStatusByCountry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Wales ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     22.7 ;
+    .
+
+:TradingStatusByCountry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Scotland ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     77.6 ;
+    .
+
+:TradingStatusByCountry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Scotland ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.7 ;
+    .
+
+:TradingStatusByCountry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :Scotland ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     21.7 ;
+    .
+
+:TradingStatusByCountry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :NorthernIreland ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     72.8 ;
+    .
+
+:TradingStatusByCountry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :NorthernIreland ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.0 ;
+    .
+
+:TradingStatusByCountry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :NorthernIreland ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     27.2 ;
+    .
+
+:TradingStatusByCountry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :UK ;
+    covid:TradingStatus             :ContinuingToTrade ;
+    covid:ProportionOfResponses     76.7 ;
+    .
+
+:TradingStatusByCountry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :UK ;
+    covid:TradingStatus             :PermanentlyCeased ;
+    covid:ProportionOfResponses     0.5 ;
+    .
+
+:TradingStatusByCountry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :TradingStatusByCountry ;
+    covid:Country                   :UK ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
+    covid:ProportionOfResponses     22.8 ;
     .
