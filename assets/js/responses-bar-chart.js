@@ -40,7 +40,7 @@ var yAxis = svg2.append("g")
   .attr("class", "myYaxis")
 
 // A function that create / update the plot for a given variable:
-function update(data) {
+function update(data, fillType) {
 
   // Update the X axis
   x.domain(data.map(function(d) { return d.industry; }))
@@ -67,7 +67,13 @@ function update(data) {
         .attr("y", function(d) { return y(d.responses); })
         .attr("width", x.bandwidth())
         .attr("height", function(d) { return height2 - y(d.responses); })
-        .attr("fill", "#69b3a2");
+        .attr("fill", function(d) {
+
+            if (fillType == "workforce"){
+                return "#FFB973";
+            }
+            return color(d.industry);
+        })
 
   // If less group in the new dataset, I delete the ones not in use anymore
   u

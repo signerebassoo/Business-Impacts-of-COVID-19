@@ -1,114 +1,3 @@
-const file = '/assets/data/queries/responses-by-industry.json';
-
-// set the dimensions and margins of the graph
-// var width = 460
-// var height = 460
-//
-// // append the svg object to the body of the page
-// var svg = d3.select("#my_dataviz")
-//   .append("svg")
-//     .attr("width", width)
-//     .attr("height", height)
-//
-// // Read data
-// d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/11_SevCatOneNumNestedOneObsPerGroup.csv", function(data) {
-//
-//   // Filter a bit the data -> more than 1 million inhabitants
-//   data = data.filter(function(d){ return d.value>10000000 })
-//
-//   // Color palette for continents?
-//   var color = d3.scaleOrdinal()
-//     .domain(["Asia", "Europe", "Africa", "Oceania", "Americas"])
-//     .range(d3.schemeSet1);
-//
-//   // Size scale for countries
-//   var size = d3.scaleLinear()
-//     .domain([0, 1400000000])
-//     .range([7,55])  // circle will be between 7 and 55 px wide
-//
-//   // create a tooltip
-//   var Tooltip = d3.select("#my_dataviz")
-//     .append("div")
-//     .style("opacity", 0)
-//     .attr("class", "tooltip")
-//     .style("background-color", "white")
-//     .style("border", "solid")
-//     .style("border-width", "2px")
-//     .style("border-radius", "5px")
-//     .style("padding", "5px")
-//
-//   // Three function that change the tooltip when user hover / move / leave a cell
-//   var mouseover = function(d) {
-//     Tooltip
-//       .style("opacity", 1)
-//   }
-//   var mousemove = function(d) {
-//     Tooltip
-//       .html('<u>' + d.key + '</u>' + "<br>" + d.value + " inhabitants")
-//       .style("left", (d3.mouse(this)[0]+20) + "px")
-//       .style("top", (d3.mouse(this)[1]) + "px")
-//   }
-//   var mouseleave = function(d) {
-//     Tooltip
-//       .style("opacity", 0)
-//   }
-//
-//   // Initialize the circle: all located at the center of the svg area
-//   var node = svg.append("g")
-//     .selectAll("circle")
-//     .data(data)
-//     .enter()
-//     .append("circle")
-//       .attr("class", "node")
-//       .attr("r", function(d){ return size(d.value)})
-//       .attr("cx", width / 2)
-//       .attr("cy", height / 2)
-//       .style("fill", function(d){ return color(d.region)})
-//       .style("fill-opacity", 0.8)
-//       .attr("stroke", "black")
-//       .style("stroke-width", 1)
-//       .on("mouseover", mouseover) // What to do when hovered
-//       .on("mousemove", mousemove)
-//       .on("mouseleave", mouseleave)
-//       .call(d3.drag() // call specific function when circle is dragged
-//            .on("start", dragstarted)
-//            .on("drag", dragged)
-//            .on("end", dragended));
-//
-//   // Features of the forces applied to the nodes:
-//   var simulation = d3.forceSimulation()
-//       .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-//       .force("charge", d3.forceManyBody().strength(.1)) // Nodes are attracted one each other of value is > 0
-//       .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force that avoids circle overlapping
-//
-//   // Apply these forces to the nodes and update their positions.
-//   // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.
-//   simulation
-//       .nodes(data)
-//       .on("tick", function(d){
-//         node
-//             .attr("cx", function(d){ return d.x; })
-//             .attr("cy", function(d){ return d.y; })
-//       });
-//
-//   // What happens when a circle is dragged?
-//   function dragstarted(d) {
-//     if (!d3.event.active) simulation.alphaTarget(.03).restart();
-//     d.fx = d.x;
-//     d.fy = d.y;
-//   }
-//   function dragged(d) {
-//     d.fx = d3.event.x;
-//     d.fy = d3.event.y;
-//   }
-//   function dragended(d) {
-//     if (!d3.event.active) simulation.alphaTarget(.03);
-//     d.fx = null;
-//     d.fy = null;
-//   }
-//
-// })
-
 var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
 
     var svg = d3.select("#responses-bubble")
@@ -116,7 +5,7 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
         .attr("width", width)
         .attr("height", height);
 
-    var color = d3.scaleOrdinal(["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3"]);
+    var color = d3.scaleOrdinal(["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3", "#ff6751", "#92c9d7", "#c292d7", "#77adf0"]);
 
     var simulation = d3.forceSimulation()
         .force("forceX", d3.forceX().strength(.1).x(width * .5))
@@ -145,6 +34,7 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
         .selectAll("circle")
         .data(graph)
         .enter().append("circle")
+          // .attr("class", function(d) { return "bubbles " + d.industry })
           .attr("r", function(d) { return d.radius; })
           .attr("fill", function(d) { return color(d.industry); })
           .attr("cx", function(d){ return d.x; })
@@ -177,12 +67,13 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
   var showTooltip = function(d) {
     tooltip
       .transition()
-      .duration(200)
+      .duration(200);
     tooltip
       .style("opacity", 1)
       .html("" + d.industry + "<br>" + d.workforce + "<br> Responses: " + d.responses)
       .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
+      .style("top", (d3.mouse(this)[1]+30) + "px");
+      // highlight(d);
   }
   var moveTooltip = function(d) {
     tooltip
@@ -193,8 +84,26 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
     tooltip
       .transition()
       .duration(200)
-      .style("opacity", 0)
+      .style("opacity", 0);
+    // noHighlight(d);
   }
+
+  // ---------------------------//
+  //       HIGHLIGHT GROUP      //
+  // ---------------------------//
+
+  // What to do when one group is hovered
+  // var highlight = function(d){
+  //   // reduce opacity of all groups
+  //   d3.selectAll(".bubbles").style("opacity", .1)
+  //   // expect the one that is hovered
+  //   d3.selectAll("."+d.industry).style("opacity", 1)
+  // }
+  //
+  // // And when it is not hovered anymore
+  // var noHighlight = function(d){
+  //   d3.selectAll(".bubbles").style("opacity", 1)
+  // }
 
     function dragstarted(d) {
       if (!d3.event.active) simulation.alphaTarget(.03).restart();
