@@ -109,7 +109,7 @@ const file = '/assets/data/queries/responses-by-industry.json';
 //
 // })
 
-var width = 500, height = 460, sizeDivisor = 140, nodePadding = 2.5;
+var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
 
     var svg = d3.select("#responses-bubble")
         .append("svg")
@@ -124,7 +124,7 @@ var width = 500, height = 460, sizeDivisor = 140, nodePadding = 2.5;
         .force("center", d3.forceCenter().x(width * .5).y(height * .5))
         .force("charge", d3.forceManyBody().strength(-15));
 
-    d3.csv("data.csv", types, function(error,graph){
+    d3.csv("assets/data/queries/responses-all.csv", types, function(error,graph){
       if (error) throw error;
 
       // sort the nodes so that the bigger ones are at the back
@@ -146,7 +146,7 @@ var width = 500, height = 460, sizeDivisor = 140, nodePadding = 2.5;
         .data(graph)
         .enter().append("circle")
           .attr("r", function(d) { return d.radius; })
-          .attr("fill", function(d) { return color(d.continent); })
+          .attr("fill", function(d) { return color(d.industry); })
           .attr("cx", function(d){ return d.x; })
           .attr("cy", function(d){ return d.y; })
           .on("mouseover", showTooltip) // What to do when hovered
@@ -180,7 +180,7 @@ var width = 500, height = 460, sizeDivisor = 140, nodePadding = 2.5;
       .duration(200)
     tooltip
       .style("opacity", 1)
-      .html("Country: " + d.country)
+      .html("" + d.industry + "<br>" + d.workforce + "<br> Responses: " + d.responses)
       .style("left", (d3.mouse(this)[0]+30) + "px")
       .style("top", (d3.mouse(this)[1]+30) + "px")
   }
@@ -214,8 +214,8 @@ var width = 500, height = 460, sizeDivisor = 140, nodePadding = 2.5;
     }
 
     function types(d){
-      d.gdp = +d.gdp;
-      d.size = +d.gdp / sizeDivisor;
+      d.responses = +d.responses;
+      d.size = +d.responses / sizeDivisor;
       d.size < 3 ? d.radius = 3 : d.radius = d.size;
       return d;
     }
