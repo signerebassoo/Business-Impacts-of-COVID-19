@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-12 pt-3 px-4">
+        <main role="main" class="ml-sm-auto col-lg-12 pt-3 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Business Impacts of COVID-19</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
@@ -64,8 +64,8 @@
                     </div>
                     <div class="col">
                       <select class="form-select" aria-label="Default select example" onchange="updateData(this.value)">
-                        <option selected value="industry" onclick="update(data1)">Industry</option>
-                        <option value="workforce" onclick="update(data2)">Workforce Size</option>
+                        <option selected value="industry">Industry</option>
+                        <option value="workforce">Workforce Size</option>
                       </select>
                     </div>
                   </div>
@@ -84,26 +84,63 @@
               <div class="card">
                 <h4 class="card-header">Trading Status</h4>
                 <div class="card-body">
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="row">
+                        <p>The participating enterprises were asked to provide their trading status at the time of the reference period.</p>
+                        <div class="col">
+                      <h5>Trading Status Proportions</h5>
+                    </div>
+                    <div class="col">
+<!--                      <select class="form-select" aria-label="Default select example" onchange="updateData(this.value)">-->
+<!--                        <option selected value="industry">Industry</option>-->
+<!--                        <option value="workforce">Workforce Size</option>-->
+<!--                      </select>-->
+                    </div>
+                        <div id="trading-stack"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div id="trading-pie"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div id="trading-ceased-industry"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div id="trading-ceased-workforce"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div id="trading-ceased-country"></div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
 
           </div>
 
-          <div class="card">
+          <div class="card" style="margin-bottom: 1.5rem">
             <h4 class="card-header">Government Schemes</h4>
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">All</a>
+                  <a class="nav-link active" href="#">Job Retention Scheme</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Job Retention Scheme</a>
+                  <a class="nav-link" href="#">Business Rates Holiday</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">SmthSmth Scheme</a>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">Deferring VAT</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">HMRC Time To Pay</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">Small Business Grant/Loan</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">Accredited Finance Agreement</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">None</a>
                 </li>
               </ul>
             </div>
@@ -138,6 +175,7 @@
         }
       }
     </script>
+    <script src="assets/js/trading-status-stack-chart.js"></script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>

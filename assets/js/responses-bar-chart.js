@@ -121,17 +121,9 @@ function update(data, fillType) {
 // Initialize the plot with the first dataset
 d3.csv("assets/data/queries/total-responses-industry.csv", function (data){
     data1 = data;
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i].industry);
-        console.log(data[i].responses);
-    }
     update(data)
 });
 
 d3.csv("assets/data/queries/total-responses-workforce.csv", function (data){
     data2 = data;
-    for (var i = 0; i < data.length; i++) {
-        console.log(data[i].workforce);
-        console.log(data[i].responses);
-    }
 });

@@ -1233,8 +1233,8 @@
 
 :TradingStatusByIndustry_4_3 rdf:type qb:Observation ;
     qb:dataSet :TradingStatusByIndustry ;
-    covid:Industry                  :Manufacturing ;
-    covid:TradingStatus             :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:TradingStatus             :TemporarilyClosedOrPaused ;
     covid:ProportionOfResponses     24.3 ;
     .
 
