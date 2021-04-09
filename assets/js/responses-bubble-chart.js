@@ -129,6 +129,57 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
       return d;
     }
 
+    // ---------------------------//
+    //       LEGEND              //
+    // ---------------------------//
+
+    // Add legend: circles
+    // var valuesToShow = [10000000, 100000000, 1000000000]
+    // var xCircle = 390
+    // var xLabel = 440
+    // svg
+    //   .selectAll("legend")
+    //   .data(valuesToShow)
+    //   .enter()
+    //   .append("circle")
+    //     .attr("cx", xCircle)
+    //     .attr("cy", function(d){ return height - 100 - z(d) } )
+    //     .attr("r", function(d){ return z(d) })
+    //     .style("fill", "none")
+    //     .attr("stroke", "black")
+    //
+    // // Add legend: segments
+    // svg
+    //   .selectAll("legend")
+    //   .data(valuesToShow)
+    //   .enter()
+    //   .append("line")
+    //     .attr('x1', function(d){ return xCircle + z(d) } )
+    //     .attr('x2', xLabel)
+    //     .attr('y1', function(d){ return height - 100 - z(d) } )
+    //     .attr('y2', function(d){ return height - 100 - z(d) } )
+    //     .attr('stroke', 'black')
+    //     .style('stroke-dasharray', ('2,2'))
+    //
+    // // Add legend: labels
+    // svg
+    //   .selectAll("legend")
+    //   .data(valuesToShow)
+    //   .enter()
+    //   .append("text")
+    //     .attr('x', xLabel)
+    //     .attr('y', function(d){ return height - 100 - z(d) } )
+    //     .text( function(d){ return d/1000000 } )
+    //     .style("font-size", 10)
+    //     .attr('alignment-baseline', 'middle')
+    //
+    // // Legend title
+    // svg.append("text")
+    //   .attr('x', xCircle)
+    //   .attr("y", height - 100 +30)
+    //   .text("Population (M)")
+    //   .attr("text-anchor", "middle")
+
 // const generateChart = data => { };
 //
 // (async () => {

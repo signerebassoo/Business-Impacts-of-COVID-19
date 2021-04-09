@@ -47,7 +47,12 @@ function update(data, fillType) {
   xAxis.call(d3.axisBottom(x))
 
   // Update the Y axis
-  y.domain([0, d3.max(data, function(d) { return d.responses }) ]);
+    if(fillType == "industry"){
+        y.domain([0, 1100 ]);
+    }
+    else{
+        y.domain([0, 3500 ]);
+    }
   yAxis.transition().duration(1000).call(d3.axisLeft(y));
 
   // Create the u variable
@@ -74,6 +79,10 @@ function update(data, fillType) {
             }
             return color(d.industry);
         })
+
+    if(fillType == "industry"){
+        xAxis.selectAll("text").remove();
+    }
 
   // If less group in the new dataset, I delete the ones not in use anymore
   u
@@ -121,7 +130,7 @@ function update(data, fillType) {
 // Initialize the plot with the first dataset
 d3.csv("assets/data/queries/total-responses-industry.csv", function (data){
     data1 = data;
-    update(data)
+    update(data, "industry")
 });
 
 d3.csv("assets/data/queries/total-responses-workforce.csv", function (data){
