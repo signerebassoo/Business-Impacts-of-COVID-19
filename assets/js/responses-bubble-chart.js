@@ -54,7 +54,7 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
   // ---------------------------//
 
   // -1- Create a tooltip div that is hidden by default:
-  var tooltip = d3.select("#responses-bubble")
+  var tooltip = d3.select("body")
     .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -71,14 +71,14 @@ var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
     tooltip
       .style("opacity", 1)
       .html("" + d.industry + "<br>" + d.workforce + "<br> Responses: " + d.responses)
-      .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px");
+      .style("left", (d3.event.pageX+30) + "px")
+      .style("top", (d3.event.pageY+30) + "px");
       // highlight(d);
   }
   var moveTooltip = function(d) {
     tooltip
-      .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
+      .style("left", (d3.event.pageX+30) + "px")
+      .style("top", (d3.event.pageY+30) + "px")
   }
   var hideTooltip = function(d) {
     tooltip

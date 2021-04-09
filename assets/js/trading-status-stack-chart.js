@@ -1,15 +1,3 @@
-// var domEle = "trading-stack";
-// var margin = {top: 20, right: 60, bottom: 60, left: 215};
-// var width3 = document.getElementById(domEle).parentElement.offsetWidth - margin.left - margin.right;
-// var height3 = 500 - margin.top - margin.bottom;
-// var xScale = d3.scaleLinear().rangeRound([0, width3]);
-// var yScale = d3.scaleBand().rangeRound([height3, 0]).padding(0.1);
-// var svg3 = d3.select("#trading-stack").append("svg")
-// 	.attr("width", width3 + margin.left + margin.right)
-// 	.attr("height", height3 + margin.top + margin.bottom)
-// 	.append("g")
-// 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
 var initStackedBarChart = {
 	draw: function(config) {
 		me = this,
@@ -50,6 +38,9 @@ var initStackedBarChart = {
 			.enter().append("rect")
 			  .attr("y", function(d) { return yScale(d.data.date); })
 			  .attr("x", function(d) { return xScale(0); })
+			  .on("mouseover", mouseover3)
+			  .on("mousemove", mousemove3)
+			  .on("mouseleave", mouseleave3)
 			  .transition().duration(1000)
 			  .attr("x", function(d) { return xScale(d[0]); })
 			  .attr("height", yScale.bandwidth())
@@ -76,27 +67,36 @@ var initStackedBarChart = {
 	}
 }
 
-// function updateTradingStatusChart(data){
-// 	var layers = stack(data);
-// 	yScale.domain(data.map(function(d) { return d.date; }));
-// 	xScale.domain([0, 100]).nice();
-//
-// 	var layer = svg3.selectAll(".layer")
-// 		.data(layers)
-// 		.enter().append("g")
-// 		.attr("class", "layer")
-// 		.style("fill", function(d, i) { return color(i); });
-//
-// 	var groups =layer.selectAll("rect")
-// 			  .data(function(d) { return d; });
-// 	groups.exit().remove();
-// 	var groupsEnter = groups.enter().append("rect");
-//
-// 	groupsEnter.attr("y", function(d) { return yScale(d.data.date); })
-// 			  .attr("x", function(d) { return xScale(d[0]); })
-// 			  .attr("height", yScale.bandwidth())
-// 			  .attr("width", function(d) { return xScale(d[1]) - xScale(d[0]) });
-// }
+// ----------------
+  // Create a tooltip
+  // ----------------
+  var tooltip3 = d3.select("body")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover3 = function(d) {
+    var subgroupName = d3.select(this.parentNode).datum().key;
+    var subgroupValue = d.data[subgroupName];
+    tooltip
+        .html(d.data["date"] + "<br>" + subgroupName + "<br>" + "Value: " + subgroupValue + "%")
+        .style("opacity", 1)
+  }
+  var mousemove3 = function(d) {
+    tooltip
+      .style("left", (d3.event.pageX+30) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      .style("top", (d3.event.pageY+30) + "px")
+  }
+  var mouseleave3 = function(d) {
+    tooltip
+      .style("opacity", 0)
+  }
 
 function wrap(text, width) {
   text.each(function() {
@@ -124,43 +124,45 @@ function wrap(text, width) {
   });
 }
 
-var trading_key = ["cont","closed","paused"];
+var trading_key = ["Continuing to Trade","Permanently Ceased Trading","Temporarily Closed or Paused Trading"];
 
 // d3.csv("assets/data/queries/trading-status-industry.csv", function (data){
 //
 //     for (var i = 0; i < data.length; i+=3) {
-//     	var entry = {"date": data[i].industry, "cont": parseFloat(data[i].proportion), "closed": parseFloat(data[i+1].proportion), "paused": parseFloat(data[i+2].proportion)};
+//     	var entry = {"date": data[i].industry, "Continuing to Trade": parseFloat(data[i].proportion), "Permanently Ceased Trading": parseFloat(data[i+1].proportion), "Temporarily Closed or Paused Trading": parseFloat(data[i+2].proportion)};
 //     	trading_data_industry.push(entry);
 //     }
 //     console.log(trading_data);
 // });
 
-var trading_data = [{"date":"Manufacturing","cont":79.0,"closed":0.4,"paused":20.6},
-	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","cont":90.0,"closed":0.0,"paused":10.0},
-	{"date":"Construction","cont":73.2,"closed":0.7,"paused":26.1},
-	{"date":"Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles","cont":75.2,"closed":0.5,"paused":24.3},
-	{"date":"Accommodation And Food Service Activities","cont":18.2,"closed":1.2,"paused":80.6},
-	{"date":"Transportation And Storage","cont":91.5,"closed":0.0,"paused":8.5},
-	{"date":"Information And Communication","cont":95.0,"closed":0.5,"paused":4.5},
-	{"date":"Professional, Scientific And Technical Activities","cont":96.7,"closed":0.3,"paused":3.0},
-	{"date":"Administrative And Support Service Activities","cont":91.5,"closed":0.4,"paused":8.1},
-	{"date":"Education","cont":86.8,"closed":0.6,"paused":12.6},
-	{"date":"Human Health And Social Work Activities","cont":93.7,"closed":1.4,"paused":4.9},
-	{"date":"Arts, Entertainment And Recreation","cont":20.5,"closed":0.0,"paused":79.5}
+var trading_data = [{"date":"Manufacturing","Continuing to Trade":79.0,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":20.6},
+	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","Continuing to Trade":90.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":10.0},
+	{"date":"Construction","Continuing to Trade":73.2,"Permanently Ceased Trading":0.7,"Temporarily Closed or Paused Trading":26.1},
+	{"date":"Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles","Continuing to Trade":75.2,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":24.3},
+	{"date":"Accommodation And Food Service Activities","Continuing to Trade":18.2,"Permanently Ceased Trading":1.2,"Temporarily Closed or Paused Trading":80.6},
+	{"date":"Transportation And Storage","Continuing to Trade":91.5,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":8.5},
+	{"date":"Information And Communication","Continuing to Trade":95.0,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":4.5},
+	{"date":"Professional, Scientific And Technical Activities","Continuing to Trade":96.7,"Permanently Ceased Trading":0.3,"Temporarily Closed or Paused Trading":3.0},
+	{"date":"Administrative And Support Service Activities","Continuing to Trade":91.5,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":8.1},
+	{"date":"Education","Continuing to Trade":86.8,"Permanently Ceased Trading":0.6,"Temporarily Closed or Paused Trading":12.6},
+	{"date":"Human Health And Social Work Activities","Continuing to Trade":93.7,"Permanently Ceased Trading":1.4,"Temporarily Closed or Paused Trading":4.9},
+	{"date":"Arts, Entertainment And Recreation","Continuing to Trade":20.5,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":79.5},
+	{"date":"All Industries","Continuing to Trade":76.7,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":22.8}
 	];
 
-var temp_data = [{"date":"Manufacturing","cont":0.0,"closed":0.4,"paused":20.6},
-	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","cont":0.0,"closed":0.0,"paused":10.0},
-	{"date":"Construction","cont":0.0,"closed":0.7,"paused":26.1},
-	{"date":"Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles","cont":0.0,"closed":0.5,"paused":24.3},
-	{"date":"Accommodation And Food Service Activities","cont":0.0,"closed":1.2,"paused":80.6},
-	{"date":"Transportation And Storage","cont":0.0,"closed":0.0,"paused":8.5},
-	{"date":"Information And Communication","cont":0.0,"closed":0.5,"paused":4.5},
-	{"date":"Professional, Scientific And Technical Activities","cont":0.0,"closed":0.3,"paused":3.0},
-	{"date":"Administrative And Support Service Activities","cont":0.0,"closed":0.4,"paused":8.1},
-	{"date":"Education","cont":0.0,"closed":0.6,"paused":12.6},
-	{"date":"Human Health And Social Work Activities","cont":0.0,"closed":1.4,"paused":4.9},
-	{"date":"Arts, Entertainment And Recreation","cont":0.0,"closed":0.0,"paused":79.5}
+var temp_data = [{"date":"Manufacturing","Continuing to Trade":0.0,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":20.6},
+	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":10.0},
+	{"date":"Construction","Continuing to Trade":0.0,"Permanently Ceased Trading":0.7,"Temporarily Closed or Paused Trading":26.1},
+	{"date":"Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles","Continuing to Trade":0.0,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":24.3},
+	{"date":"Accommodation And Food Service Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":1.2,"Temporarily Closed or Paused Trading":80.6},
+	{"date":"Transportation And Storage","Continuing to Trade":0.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":8.5},
+	{"date":"Information And Communication","Continuing to Trade":0.0,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":4.5},
+	{"date":"Professional, Scientific And Technical Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":0.3,"Temporarily Closed or Paused Trading":3.0},
+	{"date":"Administrative And Support Service Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":8.1},
+	{"date":"Education","Continuing to Trade":0.0,"Permanently Ceased Trading":0.6,"Temporarily Closed or Paused Trading":12.6},
+	{"date":"Human Health And Social Work Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":1.4,"Temporarily Closed or Paused Trading":4.9},
+	{"date":"Arts, Entertainment And Recreation","Continuing to Trade":0.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":79.5},
+	{"date":"All Industries","Continuing to Trade":0.0,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":22.8}
 	];
 
 initStackedBarChart.draw({
@@ -172,21 +174,21 @@ initStackedBarChart.draw({
 function updateStackChart(){
 	for (i=0; i < temp_data.length; i++){
 		if (document.getElementById("contChk").checked){
-			temp_data[i]["cont"] = trading_data[i]["cont"];
+			temp_data[i]["Continuing to Trade"] = trading_data[i]["Continuing to Trade"];
 		} else{
-			temp_data[i]["cont"] = 0.0;
+			temp_data[i]["Continuing to Trade"] = 0.0;
 		}
 
 		if (document.getElementById("ceasedChk").checked){
-			temp_data[i]["closed"] = trading_data[i]["closed"];
+			temp_data[i]["Permanently Ceased Trading"] = trading_data[i]["Permanently Ceased Trading"];
 		} else{
-			temp_data[i]["closed"] = 0.0;
+			temp_data[i]["Permanently Ceased Trading"] = 0.0;
 		}
 
 		if (document.getElementById("pausedChk").checked){
-			temp_data[i]["paused"] = trading_data[i]["paused"];
+			temp_data[i]["Temporarily Closed or Paused Trading"] = trading_data[i]["Temporarily Closed or Paused Trading"];
 		} else{
-			temp_data[i]["paused"] = 0.0;
+			temp_data[i]["Temporarily Closed or Paused Trading"] = 0.0;
 		}
 	}
 
@@ -196,5 +198,3 @@ function updateStackChart(){
 	element: 'trading-stack'
 });
 }
-
-// updateTradingStatusChart(temp_data);

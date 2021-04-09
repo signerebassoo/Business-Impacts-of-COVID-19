@@ -95,7 +95,7 @@ function update(data, fillType) {
   // ---------------------------//
 
   // -1- Create a tooltip div that is hidden by default:
-  var tooltip2 = d3.select("#responses-bar")
+  var tooltip2 = d3.select("body")
     .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
@@ -112,13 +112,13 @@ function update(data, fillType) {
     tooltip2
       .style("opacity", 1)
       .html(d.industry + "<br> Responses: " + d.responses)
-      .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
+      .style("left", (d3.event.pageX+30) + "px")
+      .style("top", (d3.event.pageY+30) + "px")
   }
   var moveTooltip2 = function(d) {
     tooltip2
-      .style("left", (d3.mouse(this)[0]+30) + "px")
-      .style("top", (d3.mouse(this)[1]+30) + "px")
+      .style("left", (d3.event.pageX+30) + "px")
+      .style("top", (d3.event.pageY+30) + "px")
   }
   var hideTooltip2 = function(d) {
     tooltip2
