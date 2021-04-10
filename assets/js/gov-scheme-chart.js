@@ -1,93 +1,181 @@
-// set the dimensions and margins of the graph
-var margin4 = {top: 10, right: 60, bottom: 20, left: 50},
-    width4 = document.getElementById("gov-schemes").parentElement.offsetWidth - margin4.left - margin4.right,
-    height4 = 400 - margin4.top - margin4.bottom;
+// Dimensions and margins
+var margin_gov_g = {top: 10, right: 60, bottom: 260, left: 50},
+    width_gov_g = document.getElementById("gov-schemes").parentElement.offsetWidth - margin_gov_g.left - margin_gov_g.right,
+    height_gov_g = 700 - margin_gov_g.top - margin_gov_g.bottom;
 
-// append the svg object to the body of the page
-var svg4 = d3.select("#gov-schemes")
-  .append("svg")
-    .attr("width", width4 + margin4.left + margin4.right)
-    .attr("height", height4 + margin4.top + margin4.bottom)
-  .append("g")
+// SVG chart container
+var svg_gov_g = d3.select("#gov-schemes")
+    .append("svg")
+    .attr("width", width_gov_g + margin_gov_g.left + margin_gov_g.right)
+    .attr("height", height_gov_g + margin_gov_g.top + margin_gov_g.bottom)
+    .append("g")
     .attr("transform",
-          "translate(" + margin4.left + "," + margin4.top + ")");
+        "translate(" + margin_gov_g.left + "," + margin_gov_g.top + ")");
 
-// Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_stacked.csv", function(data) {
+// Init x and y axes
+var x_gov_g = d3.scaleBand()
+    .range([0, width_gov_g])
+    .padding([0.2]);
 
-  // List of subgroups = header of the csv files = soil condition here
-  var subgroups = data.columns.slice(1)
+var xAxis_gov_g = svg_gov_g.append("g")
+    .attr("transform", "translate(0," + height_gov_g + ")");
 
-  // List of groups = species here = value of the first column called group -> I show them on the X axis
-  var groups = d3.map(data, function(d){return(d.group)}).keys()
+var y_gov_g = d3.scaleLinear()
+    .domain([0, 100])
+    .range([height_gov_g, 0]);
 
-  // Add X axis
-  var x = d3.scaleBand()
-      .domain(groups)
-      .range([0, width4])
-      .padding([0.2])
-  svg4.append("g")
-    .attr("transform", "translate(0," + height4 + ")")
-    .call(d3.axisBottom(x).tickSize(0));
+var yAxis_gov_g = svg_gov_g.append("g");
 
-  // Add Y axis
-  var y = d3.scaleLinear()
-    .domain([0, 40])
-    .range([ height4, 0 ]);
-  svg4.append("g")
-    .call(d3.axisLeft(y));
+// Update and draw chart data depending on filters
+function updateGovChart() {
 
-  // Another scale for subgroup position?
-  var xSubgroup = d3.scaleBand()
-    .domain(subgroups)
-    .range([0, x.bandwidth()])
-    .padding([0.05])
+    var dataFile = "";
 
-  // color palette = one color per subgroup
-  var color = d3.scaleOrdinal()
-    .domain(subgroups)
-    .range(['#66c2a5','#fc8d62','#8da0cb']);
+    // Button input defines data displayed
+    if(document.getElementById("job-retention").checked){
+      dataFile = "assets/data/queries/gov-schemes/covid-job-retention-scheme.csv"
+    }
+    else if(document.getElementById("business-rates-holiday").checked){
+      dataFile = "assets/data/queries/gov-schemes/business-rates-holiday.csv"
+    }
+    else if(document.getElementById("deferring-vat").checked){
+      dataFile = "assets/data/queries/gov-schemes/deferring-vat-payments.csv"
+    }
+    else if(document.getElementById("hmrc-time-to-pay").checked){
+      dataFile = "assets/data/queries/gov-schemes/hmrc-time-to-pay.csv"
+    }
+    else if(document.getElementById("small-business").checked){
+      dataFile = "assets/data/queries/gov-schemes/small-business-grant.csv"
+    }
+    else if(document.getElementById("accredited-finance").checked){
+      dataFile = "assets/data/queries/gov-schemes/accredited-finance-agreements.csv"
+    }
+    else if(document.getElementById("none").checked){
+      dataFile = "assets/data/queries/gov-schemes/none.csv"
+    }
 
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var mouseover4 = function(d) {
+    // Parse CSV data
+    d3.csv(dataFile, function (data) {
+
+        // List of subgroups, CSV header
+        var subgroups = data.columns.slice(1);
+
+        // Modify subgroups based on filters
+        if(!document.getElementById("appliedChk").checked){
+
+        }
+        if(!document.getElementById("receivedChk").checked){
+
+        }
+        if(!document.getElementById("intendedChk").checked){
+
+        }
+
+        // List of X axis groups + set X domain
+        var groups = d3.map(data, function (d) {
+            return (d.industry)
+        }).keys();
+        x_gov_g.domain(groups);
+
+        // Add X and Y axis
+        xAxis_gov_g.call(d3.axisBottom(x_gov_g).tickSize(0))
+            .selectAll("text")
+            .style('text-anchor', 'start')
+            .attr('transform', 'rotate(45 -10 10)');
+
+        yAxis_gov_g.transition().duration(1000).call(d3.axisLeft(y_gov_g));
+
+        // Subgroup positioning scale
+        var xSubgroup = d3.scaleBand()
+            .domain(subgroups)
+            .range([0, x_gov_g.bandwidth()])
+            .padding([0.05]);
+
+        // Show bar groups
+        var barGroups = svg_gov_g
+            .selectAll("g.layer")
+            .data(data);
+
+        barGroups
+            .enter()
+            .append("g")
+            .classed('layer', true)
+            .attr("transform", function (d) {
+                return "translate(" + x_gov_g(d.industry) + ",0)";
+            });
+
+        // Remove non-present groups
+        barGroups
+            .exit()
+            .remove();
+
+        // Show bars
+        var bars = svg_gov_g
+            .selectAll("g.layer")
+            .selectAll("rect")
+            .data(function (d) {
+                return subgroups.map(function (key) {
+                    return {key: key, value: d[key]};
+                });
+            });
+
+        bars
+            .enter()
+            .append("rect")
+            .on("mouseover", mouseover_gov_g)
+            .on("mousemove", mousemove_gov_g)
+            .on("mouseleave", mouseleave_gov_g)
+            .attr("width", xSubgroup.bandwidth())
+            .attr("x", function (d) {
+                return xSubgroup(d.key);
+            })
+            .attr("fill", function (d, i) {
+                return color(i);
+            })
+            .transition()
+            .duration(1000)
+            .attr("y", function (d) {
+                return y_gov_g(d.value);
+            })
+            .attr("height", function (d) {
+                return height_gov_g - y_gov_g(d.value);
+            });
+
+        bars
+            .transition()
+            .duration(1000)
+            .attr("y", function (d) {
+                return y_gov_g(d.value);
+            })
+            .attr("height", function (d) {
+                return height_gov_g - y_gov_g(d.value);
+            });
+
+        // Remove non-present bars
+        bars
+            .exit()
+            .remove();
+
+    })
+}
+
+// Change the tooltip when user hovers / moves / leaves a cell
+  var mouseover_gov_g = function(d) {
     var subgroupName = d3.select(this).datum().key;
-    // var subgroupValue = d.data[subgroupName];
+    var capSubgroup = subgroupName.charAt(0).toUpperCase() + subgroupName.slice(1)
     tooltip
-        // .html(subgroupName + "<br>" + "Value: " + subgroupValue + "%")
-        .html(subgroupName + "<br>" + "Value: " + d[subgroupName] + " %")
+        .html(capSubgroup + "<br>" + "Value: " + d.value + "%")
         .style("opacity", 1)
   }
-  var mousemove4 = function(d) {
+  var mousemove_gov_g = function(d) {
     tooltip
       .style("left", (d3.event.pageX+30) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
       .style("top", (d3.event.pageY+30) + "px")
   }
-  var mouseleave4 = function(d) {
+  var mouseleave_gov_g = function(d) {
     tooltip
       .style("opacity", 0)
   }
 
-  // Show the bars
-  svg4.append("g")
-    .selectAll("g")
-    // Enter in data = loop group per group
-    .data(data)
-    .enter()
-    .append("g")
-      .attr("transform", function(d) { return "translate(" + x(d.group) + ",0)"; })
-    .selectAll("rect")
-    .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key]}; }); })
-    .enter().append("rect")
-      .on("mouseover", mouseover4)
-      .on("mousemove", mousemove4)
-      .on("mouseleave", mouseleave4)
-      .attr("x", function(d) { return xSubgroup(d.key); })
-      .attr("y", function(d) { return y(0); })
-      .transition()
-      .duration(1000)
-      .attr("y", function (d) { return y(d.value); })
-      .attr("width", xSubgroup.bandwidth())
-      .attr("height", function(d) { return height4 - y(d.value); })
-      .attr("fill", function(d) { return color(d.key); });
-
-})
+// Init chart on page load
+updateGovChart();

@@ -152,20 +152,50 @@
 <!--            </div>-->
             <div class="card-body">
                 <div class="row">
-                    <p>The participating enterprises were asked which of the following initiatives they had applied for, which they had received, and whether they intended to apply to any.</p>
+                    <p>The participating enterprises that are either continuing to trade or who have temporarily paused or ceased trading were asked which of the following initiatives they had applied for, received, and intended to apply for.</p>
                     <div class="col-lg-6">
                       <h5>Enterprise Engagement with Initiatives</h5>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="checkbox" class="form-check-input" id="appliedChk" data-toggle="switch" value="true" checked onchange="">
+                            <input type="checkbox" class="form-check-input" id="appliedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
                             <label class="form-check-label" for="contChk" style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw"></span>Applied</label>
-                            <input type="checkbox" class="form-check-input" id="receivedChk" data-toggle="switch" value="true" checked onchange="">
+                            <input type="checkbox" class="form-check-input" id="receivedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
                             <label class="form-check-label" for="ceasedChk" style="font-size: 11px"><span class="dot" style="background-color: #FC8D62; margin-right: 1vw"></span>Received</label>
-                            <input type="checkbox" class="form-check-input" id="intendedChk" data-toggle="switch" value="true" checked onchange="">
+                            <input type="checkbox" class="form-check-input" id="intendedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
                             <label class="form-check-label" for="pausedChk" style="font-size: 11px"><span class="dot" style="background-color: #8DA0CB; margin-right: 1vw"></span>Intending to Apply</label>
                           </div>
                     </div>
+                </div>
+                <div class="row" style="margin-top: 1vh; margin-bottom: 1.5vh">
+                    <div class="col-lg-12">
+                        <div class="btn-group" role="group" style="width: 100%">
+
+                            <input type="radio" class="btn-check" name="options" id="job-retention" autocomplete="off" checked onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="job-retention">Job Retention Scheme</label>
+
+                            <input type="radio" class="btn-check" name="options" id="business-rates-holiday" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="business-rates-holiday">Business Rates Holiday</label>
+
+                            <input type="radio" class="btn-check" name="options" id="deferring-vat" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="deferring-vat">Deferring VAT</label>
+
+                            <input type="radio" class="btn-check" name="options" id="hmrc-time-to-pay" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="hmrc-time-to-pay">HMRC Time To Pay</label>
+
+                            <input type="radio" class="btn-check" name="options" id="small-business" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="small-business">Small Business Grant/Loan</label>
+
+                            <input type="radio" class="btn-check" name="options" id="accredited-finance" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="accredited-finance">Accredited Finance Agreement</label>
+
+                            <input type="radio" class="btn-check" name="options" id="none" autocomplete="off" onchange="updateGovChart()">
+                            <label class="btn btn-outline-secondary" for="none">None</label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div id="gov-schemes"></div>
                 </div>
                 <p class="text-muted" style="font-size: 11px; margin-top: 1vh">* Real Estate Services, Other Services and Mining and Quarrying have been removed due to their low response rate, but their totals are included in ‘All Industries’.</p>
