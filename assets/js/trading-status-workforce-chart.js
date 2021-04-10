@@ -83,7 +83,7 @@ function drawWorkforceChart() {
 
   svg_tr_wf_g1.append("text")
       .attr("text-anchor", "middle")
-      .text("Workforce Size 0-249")
+      .text("Workforce Size 1-249")
       .style("font-size", "11px");
 
   svg_tr_wf_g2
