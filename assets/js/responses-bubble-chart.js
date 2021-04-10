@@ -1,4 +1,4 @@
-var width = 500, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
+var width = document.getElementById("responses-bubble").parentElement.offsetWidth, height = 460, sizeDivisor = 8.5, nodePadding = 2.5;
 
     var svg = d3.select("#responses-bubble")
         .append("svg")

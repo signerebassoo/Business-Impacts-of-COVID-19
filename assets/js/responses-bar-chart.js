@@ -3,8 +3,8 @@ var data1 = [];
 var data2 = [];
 
 // set the dimensions and margins of the graph
-var margin2 = {top: 30, right: 30, bottom: 70, left: 60},
-    width2 = 460,
+var margin2 = {top: 30, right: 120, bottom: 70, left: 60},
+    width2 = document.getElementById("responses-bar").parentElement.offsetWidth - margin2.right,
     height2 = 420
 
 // append the svg object to the body of the page
