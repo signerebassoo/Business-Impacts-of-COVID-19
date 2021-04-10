@@ -59,13 +59,13 @@
 
 #Workforce Size instances
 :LessThan250 rdf:type covid:WorkforceSize ;
-    dc:title "Workforce Size 0-249" .
+    dc:title "Workforce Size 1-249" .
 
 :250Plus rdf:type covid:WorkforceSize ;
     dc:title "Workforce Size 250+" .
 
 :LessThan100 rdf:type covid:WorkforceSize ;
-    dc:title "Workforce Size 0-99" .
+    dc:title "Workforce Size 1-99" .
 
 :Between100And250 rdf:type covid:WorkforceSize ;
     dc:title "Workforce Size 100-249" .
