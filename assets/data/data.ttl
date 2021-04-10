@@ -2633,3 +2633,1579 @@
     covid:GovernmentScheme          :None ;
     covid:PercentageOfResponses     20.7 ;
     .
+
+
+#Received Government Schemes by Industry data
+:ReceivedGovernmentSchemesByIndustry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     19.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     7.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     33.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     14.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_1_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     23.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     28.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     4.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     37.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     15.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     1.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     4.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_2_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     24.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     29.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     5.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     44.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     23.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_3_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     27.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     23.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     33.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     46.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     18.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     9.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_4_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     16.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     25.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     63.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     59.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     30.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     17.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     3.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_5_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     12.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     28.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     14.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     44.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     18.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     2.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_6_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     18.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     15.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     3.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     39.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     10.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     1.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_7_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     12.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     21.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     7.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     51.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     14.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.2 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     2.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_8_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     17.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     28.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     12.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     46.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     14.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     14.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_9_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     20.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     9.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     3.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     18.4 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     5.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     0.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     0.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_10_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     22.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     8.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.2 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     15.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     4.2 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     7.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     0.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_11_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     14.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     21.9 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     45.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     43.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     25.5 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     10.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     4.3 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_12_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     17.6 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     22.2 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     19.1 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     42.7 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     16.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     7.0 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.8 ;
+    .
+
+:ReceivedGovernmentSchemesByIndustry_13_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     18.9 ;
+    .
+
+
+#Received Government Schemes by Workforce Size data
+:ReceivedGovernmentSchemesByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     22.1 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     18.6 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     40.7 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     16.8 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     8.5 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     2.3 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_1_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     20.5 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     22.4 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     20.0 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     46.1 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     16.8 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     4.6 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.1 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_2_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     16.3 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_1 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     22.2 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_2 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     19.1 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_3 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     42.7 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_4 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     16.8 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_5 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     7.0 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_6 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.8 ;
+    .
+
+:ReceivedGovernmentSchemesByWorkforceSize_3_7 rdf:type qb:Observation ;
+    qb:dataSet :ReceivedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     18.9 ;
+    .
+
+
+#Intended Government Schemes by Industry data
+:IntendedGovernmentSchemesByIndustry_1_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     38.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     8.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     16.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     9.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     6.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_1_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Manufacturing ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     38.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     7.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     22.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     14.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     7.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_2_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WaterSupplySewerageWasteManagementAndRemediationActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     45.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     42.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     3.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     17.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     9.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     5.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     11.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_3_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Construction ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     42.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     32.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     15.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     7.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     4.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     8.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_4_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     53.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     40.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     18.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     23.5 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     13.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     6.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     12.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_5_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AccommodationAndFoodServiceActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     39.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     35.5 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     19.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     7.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     7.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_6_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :TransportationAndStorage ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     26.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     7.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     16.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     6.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     5.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_7_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :InformationAndCommunication ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     58.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     35.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     7.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     22.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     8.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     7.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_8_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ProfessionalScientificAndTechnicalActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     50.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     40.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     8.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     22.7 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     10.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     6.3 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     9.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_9_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AdministrativeAndSupportServiceActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     45.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     45.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     17.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     2.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     0.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     6.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_10_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :Education ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     42.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     31.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     4.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     9.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     5.6 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     3.5 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     1.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_11_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :HumanHealthAndSocialWorkActivities ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     58.5 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     41.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     12.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     21.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     10.4 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     5.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     10.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_12_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :ArtsEntertainmentAndRecreation ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     39.2 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     36.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.1 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     19.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     8.8 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     3.9 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     8.0 ;
+    .
+
+:IntendedGovernmentSchemesByIndustry_13_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByIndustry ;
+    covid:Industry                  :AllIndustries ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.2 ;
+    .
+
+
+#Intended Government Schemes by Workforce Size data
+:IntendedGovernmentSchemesByWorkforceSize_1_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     36.7 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     8.9 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     20.2 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     9.4 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     4.6 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     8.5 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_1_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :LessThan250 ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.0 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     37.0 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.4 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     16.9 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     7.8 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     2.7 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     7.2 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_2_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :250Plus ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.6 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_1 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :CoronavirusJobRetentionScheme ;
+    covid:PercentageOfResponses     36.8 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_2 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :BusinessRatesHoliday ;
+    covid:PercentageOfResponses     9.1 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_3 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :DeferringVATPayments ;
+    covid:PercentageOfResponses     19.0 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_4 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :HMRCTimeToPayScheme ;
+    covid:PercentageOfResponses     8.8 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_5 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :GovernmentFundedSmallBusinessGrantOrLoanSchemes ;
+    covid:PercentageOfResponses     3.9 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_6 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :AccreditedFinanceAgreements ;
+    covid:PercentageOfResponses     8.0 ;
+    .
+
+:IntendedGovernmentSchemesByWorkforceSize_3_7 rdf:type qb:Observation ;
+    qb:dataSet :IntendedGovernmentSchemesByWorkforceSize ;
+    covid:WorkforceSize             :Total ;
+    covid:GovernmentScheme          :None ;
+    covid:PercentageOfResponses     48.2 ;
+    .
