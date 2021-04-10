@@ -89,28 +89,24 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <input type="checkbox" class="form-check-input" id="contChk" data-toggle="switch" value="true" checked onchange="updateStackChart()">
+                            <input type="checkbox" class="form-check-input" id="contChk" data-toggle="switch" value="true" checked onchange="updateStackChart(); updateDonutCharts()">
                             <label class="form-check-label" for="contChk" style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw"></span>Continuing</label>
-                            <input type="checkbox" class="form-check-input" id="ceasedChk" data-toggle="switch" value="true" checked onchange="updateStackChart()">
+                            <input type="checkbox" class="form-check-input" id="ceasedChk" data-toggle="switch" value="true" checked onchange="updateStackChart(); updateDonutCharts()">
                             <label class="form-check-label" for="ceasedChk" style="font-size: 11px"><span class="dot" style="background-color: #FC8D62; margin-right: 1vw"></span>Permanently Ceased</label>
-                            <input type="checkbox" class="form-check-input" id="pausedChk" data-toggle="switch" value="true" checked onchange="updateStackChart()">
+                            <input type="checkbox" class="form-check-input" id="pausedChk" data-toggle="switch" value="true" checked onchange="updateStackChart(); updateDonutCharts()">
                             <label class="form-check-label" for="pausedChk" style="font-size: 11px"><span class="dot" style="background-color: #8DA0CB; margin-right: 1vw"></span>Temporarily Paused</label>
                           </div>
                     </div>
-                        <div id="trading-stack"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div id="trading-pie"></div>
+                        <div class="col-lg-9">
+                            <div id="trading-stack"></div>
                         </div>
-                        <div class="col-lg-4">
-                            <div id="trading-ceased-industry"></div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div id="trading-ceased-workforce"></div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div id="trading-ceased-country"></div>
+                        <div class="col-lg-3">
+<!--                            <div class="row" style="height: 45%">-->
+                                <div id="trading-wf1" style="margin-left: 1.5vw"></div>
+<!--                            </div>-->
+<!--                            <div class="row" style="height: 45%">-->
+<!--                                <div id="trading-wf2" style="margin-left: 1.5vw"></div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                     <p class="text-muted" style="font-size: 11px; margin-top: 1vh">* Real Estate Services, Other Services and Mining and Quarrying have been removed due to their low response rate, but their totals are included in ‘All Industries’.</p>
@@ -192,14 +188,15 @@
         if (type == "") return;
 
         if (type == "industry"){
-          update(data1, "industry")
+          update(data1, "industry");
         }
         else{
-          update(data2, "workforce")
+          update(data2, "workforce");
         }
       }
     </script>
     <script src="assets/js/trading-status-stack-chart.js"></script>
+    <script src="assets/js/trading-status-workforce-chart.js"></script>
     <script>
         var allgroups = ["Manufacturing", "Water Supply, Sewerage, Waste Management And Remediation Activities", "Construction", "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", "Accommodation And Food Service Activities", "Transportation And Storage", "Information And Communication", "Professional, Scientific And Technical Activities", "Administrative And Support Service Activities", "Education", "Human Health And Social Work Activities", "Arts, Entertainment And Recreation"];
         var colorBoxes = '<div class="row">';
