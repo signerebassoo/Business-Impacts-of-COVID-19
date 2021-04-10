@@ -77,3 +77,10 @@ main .dot {
 .legend {
     font-size: 11px;
 }
+
+#hint {
+    color: #b3b3b3;
+    font-size: 16px;
+    float: right;
+    line-height: 28px;
+}
