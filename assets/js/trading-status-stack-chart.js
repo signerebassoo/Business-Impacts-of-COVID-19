@@ -67,19 +67,6 @@ var initStackedBarChart = {
 	}
 }
 
-// ----------------
-  // Create a tooltip
-  // ----------------
-  var tooltip3 = d3.select("body")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-
   // Three function that change the tooltip when user hover / move / leave a cell
   var mouseover3 = function(d) {
     var subgroupName = d3.select(this.parentNode).datum().key;
