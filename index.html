@@ -138,32 +138,37 @@
                     <div class="col-lg-12">
                         <div class="btn-group" role="group" style="width: 100%">
 
-                            <input type="radio" class="btn-check" name="options" id="job-retention" autocomplete="off" checked onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="job-retention" autocomplete="off" checked onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="job-retention">Job Retention Scheme</label>
 
-                            <input type="radio" class="btn-check" name="options" id="business-rates-holiday" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="business-rates-holiday" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="business-rates-holiday">Business Rates Holiday</label>
 
-                            <input type="radio" class="btn-check" name="options" id="deferring-vat" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="deferring-vat" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="deferring-vat">Deferring VAT</label>
 
-                            <input type="radio" class="btn-check" name="options" id="hmrc-time-to-pay" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="hmrc-time-to-pay" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="hmrc-time-to-pay">HMRC Time To Pay</label>
 
-                            <input type="radio" class="btn-check" name="options" id="small-business" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="small-business" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="small-business">Small Business Grant/Loan</label>
 
-                            <input type="radio" class="btn-check" name="options" id="accredited-finance" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="accredited-finance" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="accredited-finance">Accredited Finance Agreement</label>
 
-                            <input type="radio" class="btn-check" name="options" id="none" autocomplete="off" onchange="updateGovChart()">
+                            <input type="radio" class="btn-check" name="options" id="none" autocomplete="off" onchange="updateGovChart(); updateGovWfChart()">
                             <label class="btn btn-outline-secondary" for="none">None</label>
 
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div id="gov-schemes"></div>
+                    <div class="col-lg-9">
+                        <div id="gov-schemes" style="margin-right: 60px"></div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div id="gov-schemes-wf"></div>
+                    </div>
                 </div>
                 <p class="text-muted" style="font-size: 11px; margin-top: 1vh">* Real Estate Services, Other Services and Mining and Quarrying have been removed due to their low response rate, but their totals are included in ‘All Industries’.</p>
             </div>
@@ -195,7 +200,7 @@
       }
     </script>
     <script src="assets/js/trading-status-stack-chart.js"></script>
-    <script src="assets/js/trading-status-workforce-chart.js"></script>
+    <script src="assets/js/trading-status-wf-chart.js"></script>
     <script>
         var allgroups = ["Manufacturing", "Water Supply, Sewerage, Waste Management And Remediation Activities", "Construction", "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", "Accommodation And Food Service Activities", "Transportation And Storage", "Information And Communication", "Professional, Scientific And Technical Activities", "Administrative And Support Service Activities", "Education", "Human Health And Social Work Activities", "Arts, Entertainment And Recreation"];
         var colorBoxes = '<div class="row">';
@@ -214,6 +219,7 @@
         document.getElementById("industry-legend").innerHTML = colorBoxes;
     </script>
     <script src="assets/js/gov-scheme-chart.js"></script>
+    <script src="assets/js/gov-scheme-wf-chart.js"></script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
