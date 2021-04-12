@@ -5,7 +5,8 @@ var width = document.getElementById("responses-bubble").parentElement.offsetWidt
         .attr("width", width)
         .attr("height", height);
 
-    var color = d3.scaleOrdinal(["#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#b3b3b3", "#ff6751", "#92c9d7", "#c292d7", "#77adf0"]);
+    var color = d3.scaleOrdinal(["#66c2a5", "#ff6751", "#b3b3b3", "#e78ac3", "#a6d854", "#ffd92f", "#e5c494", "#8da0cb", "#fc8d62", "#92c9d7", "#c292d7", "#77adf0"]);
+    var triColor = d3.scaleOrdinal(["#66c2a5", "#fc8d62", "#8da0cb"]);
 
     var simulation = d3.forceSimulation()
         .force("forceX", d3.forceX().strength(.1).x(width * .5))

@@ -31,7 +31,7 @@ var initStackedBarChart = {
 			.data(layers)
 			.enter().append("g")
 			.attr("class", "layer")
-			.style("fill", function(d, i) { return color(i); });
+			.style("fill", function(d, i) { return triColor(i); });
 
 		  layer.selectAll("rect")
 			  .data(function(d) { return d; })

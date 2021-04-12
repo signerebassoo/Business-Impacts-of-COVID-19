@@ -73,7 +73,7 @@ function drawWorkforceChart() {
           .outerRadius(radius)
       )
       .attr('fill', function (d, i) {
-        return (color(i))
+        return (triColor(i))
       })
       .attr("stroke", "white")
       .on("mouseover", mouseover_tr_wf_g)
@@ -96,7 +96,7 @@ function drawWorkforceChart() {
           .outerRadius(radius)
       )
       .attr('fill', function (d, i) {
-        return (color(i))
+        return (triColor(i))
       })
       .attr("stroke", "white")
       .on("mouseover", mouseover_tr_wf_g)

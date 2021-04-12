@@ -119,7 +119,7 @@ function updateGovChart() {
                 return xSubgroup(d.key);
             })
             .attr("fill", function (d, i) {
-                return color(i);
+                return triColor(i);
             })
             .transition()
             .duration(1000)
