@@ -85,7 +85,7 @@
                       <h5>Trading Status Proportions</h5>
                     </div>
                     <div class="col-lg-6">
-                        <div class="form-group">
+                        <div class="form-group float-end" style="margin-right: 0.2rem">
                             <input type="checkbox" class="form-check-input" id="contChk" data-toggle="switch" value="true" checked onchange="updateStackChart(); updateDonutCharts()">
                             <label class="form-check-label" for="contChk" style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw"></span>Continuing</label>
                             <input type="checkbox" class="form-check-input" id="ceasedChk" data-toggle="switch" value="true" checked onchange="updateStackChart(); updateDonutCharts()">
@@ -98,12 +98,7 @@
                             <div id="trading-stack"></div>
                         </div>
                         <div class="col-lg-3">
-<!--                            <div class="row" style="height: 45%">-->
-                                <div id="trading-wf1" style="margin-left: 1.5vw"></div>
-<!--                            </div>-->
-<!--                            <div class="row" style="height: 45%">-->
-<!--                                <div id="trading-wf2" style="margin-left: 1.5vw"></div>-->
-<!--                            </div>-->
+                                <div id="trading-wf1" style="margin-left: 1.8vw"></div>
                         </div>
                     </div>
                     <p class="text-muted" style="font-size: 11px; margin-top: 1vh">* Real Estate Services, Other Services and Mining and Quarrying have been removed due to their low response rate, but their totals are included in ‘All Industries’.</p>
@@ -122,14 +117,21 @@
                       <h5>Enterprise Engagement with Initiatives</h5>
                     </div>
                     <div class="col-lg-6">
-                        <div class="form-group">
-                            <input type="checkbox" class="form-check-input" id="appliedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
-                            <label class="form-check-label" for="contChk" style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw"></span>Applied</label>
-                            <input type="checkbox" class="form-check-input" id="receivedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
-                            <label class="form-check-label" for="ceasedChk" style="font-size: 11px"><span class="dot" style="background-color: #FC8D62; margin-right: 1vw"></span>Received</label>
-                            <input type="checkbox" class="form-check-input" id="intendedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">
-                            <label class="form-check-label" for="pausedChk" style="font-size: 11px"><span class="dot" style="background-color: #8DA0CB; margin-right: 1vw"></span>Intending to Apply</label>
-                          </div>
+<!--                        <div class="form-group">-->
+<!--                            <input type="checkbox" class="form-check-input" id="appliedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">-->
+<!--                            <label class="form-check-label" for="contChk" style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw"></span>Applied</label>-->
+<!--                            <input type="checkbox" class="form-check-input" id="receivedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">-->
+<!--                            <label class="form-check-label" for="ceasedChk" style="font-size: 11px"><span class="dot" style="background-color: #FC8D62; margin-right: 1vw"></span>Received</label>-->
+<!--                            <input type="checkbox" class="form-check-input" id="intendedChk" data-toggle="switch" value="true" checked onchange="updateGovChart()">-->
+<!--                            <label class="form-check-label" for="pausedChk" style="font-size: 11px"><span class="dot" style="background-color: #8DA0CB; margin-right: 1vw"></span>Intending to Apply</label>-->
+<!--                          </div>-->
+                            <div class="float-end" style="margin-right: 0.2rem">
+                                <label style="font-size: 11px"><span class="dot" style="background-color: #66C2A5; margin-right: 1vw; margin-left: 1vw"></span>Applied</label>
+                                <label style="font-size: 11px"><span class="dot" style="background-color: #FC8D62; margin-right: 1vw; margin-left: 1vw"></span>Received</label>
+                                <label style="font-size: 11px"><span class="dot" style="background-color: #8DA0CB; margin-right: 1vw; margin-left: 1vw"></span>Intending to Apply</label>
+                            </div>
+
+
                     </div>
                 </div>
                 <div class="row" style="margin-top: 1vh; margin-bottom: 1.5vh">

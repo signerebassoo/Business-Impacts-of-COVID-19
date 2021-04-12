@@ -60,17 +60,6 @@ function updateGovChart() {
         // List of subgroups, CSV header
         var subgroups = data.columns.slice(1);
 
-        // Modify subgroups based on filters
-        if(!document.getElementById("appliedChk").checked){
-
-        }
-        if(!document.getElementById("receivedChk").checked){
-
-        }
-        if(!document.getElementById("intendedChk").checked){
-
-        }
-
         // List of X axis groups + set X domain
         var groups = d3.map(data, function (d) {
             return (d.industry)
