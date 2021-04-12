@@ -1,5 +1,5 @@
 // Dimensions and margins
-var margin_gov_g = {top: 10, right: 0, bottom: 260, left: 50},
+var margin_gov_g = {top: 10, right: 10, bottom: 260, left: 50},
     width_gov_g = document.getElementById("gov-schemes").parentElement.offsetWidth - margin_gov_g.left - margin_gov_g.right,
     height_gov_g = 700 - margin_gov_g.top - margin_gov_g.bottom;
 
