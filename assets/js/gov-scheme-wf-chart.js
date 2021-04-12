@@ -112,8 +112,8 @@ function updateGovWfChart() {
             .enter()
             .append("rect")
             .on("mouseover", mouseover_gov_g)
-            .on("mousemove", mousemove_gov_g)
-            .on("mouseleave", mouseleave_gov_g)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
             .attr("width", xSubgroup.bandwidth())
             .attr("x", function (d) {
                 return xSubgroup(d.key);

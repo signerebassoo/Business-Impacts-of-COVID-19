@@ -54,7 +54,7 @@ function updateGovChart() {
       dataFile = "assets/data/queries/gov-schemes/none.csv"
     }
 
-    // Parse CSV data
+    // Parse data
     d3.csv(dataFile, function (data) {
 
         // List of subgroups, CSV header
@@ -112,8 +112,8 @@ function updateGovChart() {
             .enter()
             .append("rect")
             .on("mouseover", mouseover_gov_g)
-            .on("mousemove", mousemove_gov_g)
-            .on("mouseleave", mouseleave_gov_g)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
             .attr("width", xSubgroup.bandwidth())
             .attr("x", function (d) {
                 return xSubgroup(d.key);
@@ -148,22 +148,13 @@ function updateGovChart() {
     })
 }
 
-// Change the tooltip when user hovers / moves / leaves a cell
+// Tooltip event
   var mouseover_gov_g = function(d) {
     var subgroupName = d3.select(this).datum().key;
     var capSubgroup = subgroupName.charAt(0).toUpperCase() + subgroupName.slice(1)
     tooltip
         .html(capSubgroup + "<br>" + "Value: " + d.value + "%")
         .style("opacity", 1)
-  }
-  var mousemove_gov_g = function(d) {
-    tooltip
-      .style("left", (d3.event.pageX+30) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.event.pageY+30) + "px")
-  }
-  var mouseleave_gov_g = function(d) {
-    tooltip
-      .style("opacity", 0)
   }
 
 // Init chart on page load

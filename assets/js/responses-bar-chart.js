@@ -1,128 +1,104 @@
-// create 2 data_set
-var data1 = [];
-var data2 = [];
+// Create 2 dataset variables
+var data_idr = [];
+var data_wf = [];
 
-// set the dimensions and margins of the graph
-var margin2 = {top: 30, right: 120, bottom: 70, left: 60},
-    width2 = document.getElementById("responses-bar").parentElement.offsetWidth - margin2.right,
-    height2 = 420
+// Dimensions and margins
+var margin_resp_g = {top: 30, right: 120, bottom: 70, left: 60},
+    width_resp_g = document.getElementById("responses-bar").parentElement.offsetWidth - margin_resp_g.right,
+    height_resp_g = 420
 
-// append the svg object to the body of the page
-var svg2 = d3.select("#responses-bar")
+// SVG chart container
+var svg_resp_g = d3.select("#responses-bar")
   .append("svg")
-    .attr("width", width2 + margin2.left + margin2.right)
-    .attr("height", height2 + margin2.top + margin2.bottom)
+    .attr("width", width_resp_g + margin_resp_g.left + margin_resp_g.right)
+    .attr("height", height_resp_g + margin_resp_g.top + margin_resp_g.bottom)
   .append("g")
     .attr("transform",
-          "translate(" + margin2.left + "," + margin2.top + ")");
+          "translate(" + margin_resp_g.left + "," + margin_resp_g.top + ")");
 
-// Initialize the X axis
+// Init x and y axis
 var x = d3.scaleBand()
-  .range([ 0, width2 ])
+  .range([ 0, width_resp_g ])
   .padding(0.2);
-var xAxis = svg2.append("g")
-  .attr("transform", "translate(0," + height2 + ")")
 
-// Initialize the Y axis
+var xAxis = svg_resp_g.append("g")
+  .attr("transform", "translate(0," + height_resp_g + ")")
+
 var y = d3.scaleLinear()
-  .range([ height2, 0]);
-var yAxis = svg2.append("g")
+  .range([ height_resp_g, 0]);
+
+var yAxis = svg_resp_g.append("g")
   .attr("class", "myYaxis")
 
-// A function that create / update the plot for a given variable:
+// Update chart with new data
 function update(data, fillType) {
 
-  // Update the X axis
-  x.domain(data.map(function(d) { return d.industry; }))
-  xAxis.call(d3.axisBottom(x))
+    // Update x and y axes
+    x.domain(data.map(function(d) { return d.industry; }))
+    xAxis.call(d3.axisBottom(x))
 
-  // Update the Y axis
     if(fillType == "industry"){
         y.domain([0, 1100 ]);
     }
     else{
         y.domain([0, 3500 ]);
     }
-  yAxis.transition().duration(1000).call(d3.axisLeft(y));
+    yAxis.transition().duration(1000).call(d3.axisLeft(y));
 
-  // Create the u variable
-  var u = svg2.selectAll("rect")
+    var bars = svg_resp_g.selectAll("rect")
     .data(data)
 
-  u
-    .enter()
-    .append("rect") // Add a new rect for each new elements
-      .on("mouseover", showTooltip2) // What to do when hovered
-    .on("mousemove", moveTooltip2)
-    .on("mouseleave", hideTooltip2)
-    .merge(u) // get the already existing elements as well
-    .transition() // and apply changes to all of them
-    .duration(1000)
-        .attr("x", function(d) { return x(d.industry); })
-        .attr("y", function(d) { return y(d.responses); })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height2 - y(d.responses); })
-        .attr("fill", function(d) {
+    // Show bars
+    bars
+        .enter()
+        .append("rect") // Add a new rect for each new elements
+          .on("mouseover", mouseover_resp_g) // What to do when hovered
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave)
+        .merge(bars) // get the already existing elements as well
+        .transition() // and apply changes to all of them
+        .duration(1000)
+            .attr("x", function(d) { return x(d.industry); })
+            .attr("y", function(d) { return y(d.responses); })
+            .attr("width", x.bandwidth())
+            .attr("height", function(d) { return height_resp_g - y(d.responses); })
+            .attr("fill", function(d) {
 
-            if (fillType == "workforce"){
-                return "#FFB973";
-            }
-            return color(d.industry);
-        })
+                if (fillType == "workforce"){
+                    return "#FFB973";
+                }
+                return color(d.industry);
+            })
 
     if(fillType == "industry"){
         xAxis.selectAll("text").remove();
     }
 
-  // If less group in the new dataset, I delete the ones not in use anymore
-  u
+  // Remove non-present bars
+  bars
     .exit()
     .remove();
 }
 
-// ---------------------------//
-  //      TOOLTIP               //
-  // ---------------------------//
-
-  // -1- Create a tooltip div that is hidden by default:
-  var tooltip2 = d3.select("body")
-    .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "gray")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("color", "white")
-
-  // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
-  var showTooltip2 = function(d) {
-    tooltip2
+// Tooltip event
+var mouseover_resp_g = function(d) {
+    tooltip
       .transition()
       .duration(200)
-    tooltip2
+    tooltip
       .style("opacity", 1)
       .html(d.industry + "<br> Responses: " + d.responses)
       .style("left", (d3.event.pageX+30) + "px")
       .style("top", (d3.event.pageY+30) + "px")
-  }
-  var moveTooltip2 = function(d) {
-    tooltip2
-      .style("left", (d3.event.pageX+30) + "px")
-      .style("top", (d3.event.pageY+30) + "px")
-  }
-  var hideTooltip2 = function(d) {
-    tooltip2
-      .transition()
-      .duration(200)
-      .style("opacity", 0)
-  }
+}
 
-// Initialize the plot with the first dataset
+// Init the plot with the first dataset
 d3.csv("assets/data/queries/total-responses-industry.csv", function (data){
-    data1 = data;
+    data_idr = data;
     update(data, "industry")
 });
 
+// Parse second dataset
 d3.csv("assets/data/queries/total-responses-workforce.csv", function (data){
-    data2 = data;
+    data_wf = data;
 });

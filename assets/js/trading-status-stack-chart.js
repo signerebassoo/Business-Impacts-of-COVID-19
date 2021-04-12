@@ -1,21 +1,26 @@
+
 var initStackedBarChart = {
+
+	// Set up chart parameters
 	draw: function(config) {
 		me = this,
 		domEle = config.element,
 		stackKey = config.key,
 		data = config.data,
 		margin = {top: 20, right: 10, bottom: 60, left: 215},
-		width3 = document.getElementById(domEle).parentElement.offsetWidth - margin.left - margin.right,
-		height3 = 500 - margin.top - margin.bottom,
-		xScale = d3.scaleLinear().rangeRound([0, width3]),
-		yScale = d3.scaleBand().rangeRound([height3, 0]).padding(0.1),
-		color3 = d3.scaleOrdinal(d3.schemeCategory20),
-		xAxis3 = d3.axisBottom(xScale),
-		yAxis3 =  d3.axisLeft(yScale);
-		d3.selectAll("#" + domEle + " > *").remove();
-		svg3 = d3.select("#"+domEle).append("svg")
-				.attr("width", width3 + margin.left + margin.right)
-				.attr("height", height3 + margin.top + margin.bottom)
+		width_tr_g = document.getElementById(domEle).parentElement.offsetWidth - margin.left - margin.right,
+		height_tr_g = 500 - margin.top - margin.bottom,
+		xScale = d3.scaleLinear().rangeRound([0, width_tr_g]),
+		yScale = d3.scaleBand().rangeRound([height_tr_g, 0]).padding(0.1),
+		xAxis_tr_g = d3.axisBottom(xScale),
+		yAxis_tr_g =  d3.axisLeft(yScale);
+
+		d3.selectAll("#" + domEle + " > *").remove(); // Remove old chart
+
+		// SVG chart container
+		svg_tr_g = d3.select("#"+domEle).append("svg")
+				.attr("width", width_tr_g + margin.left + margin.right)
+				.attr("height", height_tr_g + margin.top + margin.bottom)
 				.append("g")
 				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -27,64 +32,59 @@ var initStackedBarChart = {
 			yScale.domain(data.map(function(d) { return d.date; }));
 			xScale.domain([0, 100]).nice();
 
-		var layer = svg3.selectAll(".layer")
+		var layer = svg_tr_g.selectAll(".layer")
 			.data(layers)
 			.enter().append("g")
 			.attr("class", "layer")
 			.style("fill", function(d, i) { return triColor(i); });
 
-		  layer.selectAll("rect")
-			  .data(function(d) { return d; })
-			.enter().append("rect")
-			  .attr("y", function(d) { return yScale(d.data.date); })
-			  .attr("x", function(d) { return xScale(0); })
-			  .on("mouseover", mouseover3)
-			  .on("mousemove", mousemove3)
-			  .on("mouseleave", mouseleave3)
-			  .transition().duration(1000)
-			  .attr("x", function(d) { return xScale(d[0]); })
-			  .attr("height", yScale.bandwidth())
-			  .attr("width", function(d) { return xScale(d[1]) - xScale(d[0]) });
+		// Show bars
+		layer.selectAll("rect")
+			.data(function(d) { return d; })
+		.enter().append("rect")
+			.attr("y", function(d) { return yScale(d.data.date); })
+			.attr("x", function(d) { return xScale(0); })
+			.on("mouseover", mouseover_tr_g)
+			.on("mousemove", mousemove)
+			.on("mouseleave", mouseleave)
+			.transition().duration(1000)
+			.attr("x", function(d) { return xScale(d[0]); })
+			.attr("height", yScale.bandwidth())
+			.attr("width", function(d) { return xScale(d[1]) - xScale(d[0]) });
 
-			svg3.append("g")
+		// Append x and y axes
+		svg_tr_g.append("g")
 			.attr("class", "axis axis--x")
-			.attr("transform", "translate(0," + (height3+5) + ")")
-			.call(xAxis3);
+			.attr("transform", "translate(0," + (height_tr_g+5) + ")")
+			.call(xAxis_tr_g);
 
-			svg3.append("g")
+		svg_tr_g.append("g")
 			.attr("class", "axis axis--y")
 			.attr("transform", "translate(0,0)")
-			.call(yAxis3)
+			.call(yAxis_tr_g)
 			.selectAll(".tick text")
-      		.call(wrap, 190);
+			.call(wrap, 190);
 
-			svg3.append("text")
-			  .attr("transform",
-					"translate(" + (width3/2) + " ," +
-								   (height3 + margin.top + 30) + ")")
-			  .style("text-anchor", "middle")
-			  .text("Proportion of Responses (%)");
+		// Append x-axis description
+		svg_tr_g.append("text")
+			.attr("transform",
+				"translate(" + (width_tr_g/2) + " ," +
+							   (height_tr_g + margin.top + 30) + ")")
+			.style("text-anchor", "middle")
+			.text("Proportion of Responses (%)");
 	}
 }
 
-  // Three function that change the tooltip when user hover / move / leave a cell
-  var mouseover3 = function(d) {
-    var subgroupName = d3.select(this.parentNode).datum().key;
-    var subgroupValue = d.data[subgroupName];
-    tooltip
-        .html(d.data["date"] + "<br>" + subgroupName + "<br>" + "Value: " + subgroupValue + "%")
-        .style("opacity", 1)
-  }
-  var mousemove3 = function(d) {
-    tooltip
-      .style("left", (d3.event.pageX+30) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-      .style("top", (d3.event.pageY+30) + "px")
-  }
-  var mouseleave3 = function(d) {
-    tooltip
-      .style("opacity", 0)
-  }
+// Tooltip event
+var mouseover_tr_g = function(d) {
+	var subgroupName = d3.select(this.parentNode).datum().key;
+	var subgroupValue = d.data[subgroupName];
+	tooltip
+		.html(d.data["date"] + "<br>" + subgroupName + "<br>" + "Value: " + subgroupValue + "%")
+		.style("opacity", 1)
+}
 
+// Wrap long labels
 function wrap(text, width) {
   text.each(function() {
     var text = d3.select(this),
@@ -111,17 +111,10 @@ function wrap(text, width) {
   });
 }
 
+// Define chart key
 var trading_key = ["Continuing to Trade","Permanently Ceased Trading","Temporarily Closed or Paused Trading"];
 
-// d3.csv("assets/data/queries/trading-status-industry.csv", function (data){
-//
-//     for (var i = 0; i < data.length; i+=3) {
-//     	var entry = {"date": data[i].industry, "Continuing to Trade": parseFloat(data[i].proportion), "Permanently Ceased Trading": parseFloat(data[i+1].proportion), "Temporarily Closed or Paused Trading": parseFloat(data[i+2].proportion)};
-//     	trading_data_industry.push(entry);
-//     }
-//     console.log(trading_data);
-// });
-
+// Dummy data
 var trading_data = [{"date":"Manufacturing","Continuing to Trade":79.0,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":20.6},
 	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","Continuing to Trade":90.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":10.0},
 	{"date":"Construction","Continuing to Trade":73.2,"Permanently Ceased Trading":0.7,"Temporarily Closed or Paused Trading":26.1},
@@ -137,6 +130,7 @@ var trading_data = [{"date":"Manufacturing","Continuing to Trade":79.0,"Permanen
 	{"date":"All Industries","Continuing to Trade":76.7,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":22.8}
 	];
 
+// Dummy data for modifications
 var temp_data = [{"date":"Manufacturing","Continuing to Trade":0.0,"Permanently Ceased Trading":0.4,"Temporarily Closed or Paused Trading":20.6},
 	{"date":"Water Supply, Sewerage, Waste Management And Remediation Activities","Continuing to Trade":0.0,"Permanently Ceased Trading":0.0,"Temporarily Closed or Paused Trading":10.0},
 	{"date":"Construction","Continuing to Trade":0.0,"Permanently Ceased Trading":0.7,"Temporarily Closed or Paused Trading":26.1},
@@ -152,13 +146,17 @@ var temp_data = [{"date":"Manufacturing","Continuing to Trade":0.0,"Permanently 
 	{"date":"All Industries","Continuing to Trade":0.0,"Permanently Ceased Trading":0.5,"Temporarily Closed or Paused Trading":22.8}
 	];
 
+// Init stack chart
 initStackedBarChart.draw({
 	data: trading_data,
 	key: trading_key,
 	element: 'trading-stack'
 });
 
+// Update stack chart based on filters
 function updateStackChart(){
+
+	// Check all filters and modify data input
 	for (i=0; i < temp_data.length; i++){
 		if (document.getElementById("contChk").checked){
 			temp_data[i]["Continuing to Trade"] = trading_data[i]["Continuing to Trade"];
@@ -179,6 +177,7 @@ function updateStackChart(){
 		}
 	}
 
+	// Init stack chart with new input
 	initStackedBarChart.draw({
 	data: temp_data,
 	key: trading_key,
